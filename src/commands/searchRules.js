@@ -5,6 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const pdfParse = require('pdf-parse');
 
+const { SEARCH_COMMAND, SEARCH_USAGE, MAX_SEARCH_RESULTS, SNIPPET_RADIUS } = require('../constants/search');
 const PDF_DIR = path.join(__dirname, 'rule_documents');
 
 // Index structure: { filename: { page: text } }
@@ -32,12 +33,12 @@ function searchKeyword(keyword) {
             if (text.toLowerCase().includes(keyword.toLowerCase())) {
                 // Get a snippet around the keyword
                 const idx = text.toLowerCase().indexOf(keyword.toLowerCase());
-                const snippet = text.substring(Math.max(0, idx - 40), idx + keyword.length + 40).replace(/\n/g, ' ');
+                const snippet = text.substring(Math.max(0, idx - SNIPPET_RADIUS), idx + keyword.length + SNIPPET_RADIUS).replace(/\n/g, ' ');
                 results.push({ file, page: pageNum, snippet });
             }
         }
     }
-    return results;
+    return results.slice(0, MAX_SEARCH_RESULTS);
 }
 
 module.exports = {

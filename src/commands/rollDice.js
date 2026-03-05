@@ -1,14 +1,16 @@
 
 // dice.js
 // Dice rolling logic for the Discord bot
-const { DiceNotationError, InvalidDieError, DiceRangeError } = require('./dice_errors');
+const { DiceNotationError, InvalidDieError, DiceRangeError } = require('../errors/errors');
+const { VALID_DICE_TYPES, MIN_DICE, MAX_DICE } = require('../constants/dice');
+const { ERROR_MESSAGES } = require('../errors/errors');
 
 function parseDiceNotation(notation) {
     // Matches ndf+x or ndf-x, e.g., 2d6+3, 1d20-2
     const regex = /^(\d+)[dD](\d+)([+-]\d+)?$/;
     const match = notation.trim().match(regex);
     if (!match) {
-        throw new DiceNotationError('Invalid dice notation. Use format NdF+X, e.g., 2d6+3');
+        throw new DiceNotationError(ERROR_MESSAGES.INVALID_NOTATION);
     }
     const numDice = parseInt(match[1], 10);
     const numFaces = parseInt(match[2], 10);
@@ -17,9 +19,7 @@ function parseDiceNotation(notation) {
 }
 
 function isValidDie(numFaces) {
-    // Only allow common dice: 2, 4, 6, 8, 10, 12, 20, 100
-    const validDice = [2, 4, 6, 8, 10, 12, 20, 100];
-    return validDice.includes(numFaces);
+    return VALID_DICE_TYPES.includes(numFaces);
 }
 
 function rollDice(numDice, numFaces) {
@@ -32,11 +32,11 @@ function rollDice(numDice, numFaces) {
 
 function roll(notation) {
     const { numDice, numFaces, modifier } = parseDiceNotation(notation);
-    if (numDice < 1 || numDice > 100) {
-        throw new DiceRangeError('Number of dice must be between 1 and 100.');
+    if (numDice < MIN_DICE || numDice > MAX_DICE) {
+        throw new DiceRangeError(ERROR_MESSAGES.DICE_RANGE.replace('{min}', MIN_DICE).replace('{max}', MAX_DICE));
     }
     if (!isValidDie(numFaces)) {
-        throw new InvalidDieError(`A ${numFaces}-sided die is not supported. Use common dice (d2, d4, d6, d8, d10, d12, d20, d100).`);
+        throw new InvalidDieError(ERROR_MESSAGES.UNSUPPORTED_DIE.replace('{faces}', numFaces));
     }
     const rolls = rollDice(numDice, numFaces);
     const total = rolls.reduce((a, b) => a + b, 0) + modifier;

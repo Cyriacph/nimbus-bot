@@ -2,8 +2,10 @@
 
 require('dotenv').config();
 const { Client, Intents } = require('discord.js');
-const dice = require('./dice_command/dice');
-const pdfIndexer = require('./search_command/pdfIndexer');
+const dice = require('./commands/rollDice');
+const pdfIndexer = require('./commands/searchRules');
+const { COMMANDS, USAGE } = require('./constants/commands');
+const { SEARCH_USAGE } = require('./constants/search');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 client.on('ready', () => {
@@ -28,9 +30,9 @@ async function startBot() {
     const command = message.content.split(' ')[0].toLowerCase();
 
     // Dice rolling command
-    if (command === '!roll') {
+    if (command === COMMANDS.ROLL) {
       if (!args[0]) {
-        message.reply('Please provide dice notation, e.g., !roll 2d6+3');
+        message.reply(USAGE.ROLL);
         return;
       }
       try {
@@ -54,9 +56,9 @@ async function startBot() {
       }
     }
     // Rule search command
-    if (command === '!search') {
+    if (command === COMMANDS.SEARCH) {
       if (!args[0]) {
-        message.reply('Please provide a keyword to search for, e.g., !search stealth');
+        message.reply(SEARCH_USAGE);
         return;
       }
       const results = pdfIndexer.searchKeyword(args[0]);
