@@ -1,10 +1,12 @@
 
 
 require('dotenv').config();
-const { Client, Intents } = require('discord.js');
-const dice = require('./dice_command/dice');
-const pdfIndexer = require('./search_command/pdfIndexer');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
+const { Client, GatewayIntentBits } = require('discord.js');
+const dice = require('./commands/rollDice');
+const searchRules = require('./commands/searchRules');
+const { COMMANDS, USAGE } = require('./constants/commands');
+const { SEARCH_USAGE } = require('./constants/search');
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}`);
@@ -12,25 +14,24 @@ client.on('ready', () => {
 
 
 
-client.once('ready', () => {
-  console.log(`Logged in as ${client.user.tag}`);
-});
-  const command = message.content.split(' ')[0].toLowerCase();
 
-async function startBot() {
-  console.log('Indexing rule PDFs...');
-  await pdfIndexer.indexPDFs();
-  console.log('PDF indexing complete. Starting bot...');
+function startBot() {
+  client.once('ready', () => {
+    console.log(`Logged in as ${client.user.tag}`);
+  });
 
   client.on('messageCreate', async message => {
+    console.log(`Received message: '${message.content}' from ${message.author.tag} in #${message.channel.name}`);
     if (message.author.bot) return;
+    if (!message.content || message.content.trim() === '') return;
     const args = message.content.split(' ').slice(1);
     const command = message.content.split(' ')[0].toLowerCase();
+    console.log(`Parsed command: '${command}', args: ${args}`);
 
     // Dice rolling command
-    if (command === '!roll') {
+    if (command === COMMANDS.ROLL) {
       if (!args[0]) {
-        message.reply('Please provide dice notation, e.g., !roll 2d6+3');
+        message.reply(USAGE.ROLL);
         return;
       }
       try {
@@ -54,12 +55,12 @@ async function startBot() {
       }
     }
     // Rule search command
-    if (command === '!search') {
+    if (command === COMMANDS.SEARCH) {
       if (!args[0]) {
-        message.reply('Please provide a keyword to search for, e.g., !search stealth');
+        message.reply(SEARCH_USAGE);
         return;
       }
-      const results = pdfIndexer.searchKeyword(args[0]);
+      const results = searchRules.searchKeyword(args[0]);
       if (results.length === 0) {
         message.reply(`No results found for "${args[0]}"`);
       } else {
@@ -69,7 +70,7 @@ async function startBot() {
     }
   });
 
-  client.login(process.env.DISCORD_BOT_TOKEN);
+  client.login(process.env.DISCORD_TOKEN);
 }
 
 startBot();
