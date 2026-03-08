@@ -24,6 +24,46 @@ function startBot() {
   });
 
     client.on('messageCreate', async message => {
+            // Add character sheet JSON via attachment
+            if (command === COMMANDS.ADD) {
+              if (!args[0]) {
+                message.reply(USAGE.ADD);
+                return;
+              }
+              const characterName = args[0];
+              if (!message.attachments || message.attachments.size === 0) {
+                message.reply('Please attach a JSON file.');
+                return;
+              }
+              const attachment = message.attachments.first();
+              if (!attachment.name.endsWith('.json')) {
+                message.reply('Only .json files are accepted.');
+                return;
+              }
+              // Download the file
+              const fetch = require('node-fetch');
+              fetch(attachment.url)
+                .then(res => res.text())
+                .then(data => {
+                  let sheet;
+                  try {
+                    sheet = JSON.parse(data);
+                  } catch (err) {
+                    message.reply('Invalid JSON format.');
+                    return;
+                  }
+                  const { storeCharacterSheet } = require('./commands/storeSheet');
+                  try {
+                    const filePath = storeCharacterSheet(characterName, sheet);
+                    message.reply(`Character sheet for '${characterName}' added successfully.`);
+                  } catch (err) {
+                    message.reply(`Error storing character sheet: ${err.message}`);
+                  }
+                })
+                .catch(() => {
+                  message.reply('Failed to download the attachment.');
+                });
+            }
       console.log(`Received message: '${message.content}' from ${message.author.tag} in #${message.channel.name}`);
       if (message.author.bot) return;
       if (!message.content || message.content.trim() === '') return;
