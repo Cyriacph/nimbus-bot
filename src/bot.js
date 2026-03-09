@@ -214,6 +214,29 @@ function startBot() {
           message.reply(`Error reading character sheet: ${err.message}`);
         }
       }
+
+      if (command === '!addhp') {
+        if (args.length < 2) {
+          message.reply(USAGE.ADD_HP);
+          return;
+        }
+        const characterName = args[0];
+        const value = parseInt(args[1]);
+        if (isNaN(value)) {
+          message.reply('Value must be a number.');
+          return;
+        }
+        const { addHP } = require('./commands/addHP');
+        try {
+          console.log(`Updating HP for '${characterName}' by ${value}`);
+          const newHP = addHP(characterName, value);
+          message.reply(`Updated HP for '${characterName}'. New HP: ${newHP}`);
+        } catch (err) {
+          message.reply(`Error updating HP: ${err.message}`);
+        }
+
+      }
+
     });
 
   client.login(process.env.DISCORD_TOKEN);
