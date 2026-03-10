@@ -1,6 +1,8 @@
 
 
 require('dotenv').config();
+// Enable Discord.js debug output
+process.env.DEBUG = 'discord.js:*';
 const { Client, GatewayIntentBits } = require('discord.js');
 const dice = require('./commands/rollDice');
 const searchRules = require('./commands/searchRules');
@@ -8,6 +10,17 @@ const { COMMANDS, USAGE } = require('./constants/commands');
 const { SEARCH_USAGE } = require('./constants/search');
 const characterSheetUtils = require('./utils/characterSheetUtils');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
+
+// Listen for all Discord.js debug events
+client.on('debug', info => {
+  console.log('[DEBUG]', info);
+});
+client.on('warn', info => {
+  console.log('[WARN]', info);
+});
+client.on('error', error => {
+  console.error('[ERROR]', error);
+});
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}`);
@@ -69,54 +82,8 @@ function startBot() {
           });
       }
 
-      // Fetch and send character sheet JSON command
-      if (command === COMMANDS.FETCH) {
-        if (!args[0]) {
-          message.reply(USAGE.FETCH);
-          return;
-        }
-        const characterName = args[0];
-        const { fetchCharacterSheet } = require('./commands/fetchSheet');
-        try {
-          const jsonPath = fetchCharacterSheet(characterName);
-          message.reply({ content: `JSON for '${characterName}' fetched.`, files: [jsonPath] });
-        } catch (err) {
-          message.reply(`Error fetching JSON: ${err.message}`);
-        }
-      }
 
-      // Fetch and send character sheet JSON command
-      if (command === COMMANDS.FETCH) {
-        if (!args[0]) {
-          message.reply(USAGE.FETCH);
-          return;
-        }
-        const characterName = args[0];
-        const { fetchCharacterSheet } = require('./commands/fetchSheet');
-        try {
-          const jsonPath = fetchCharacterSheet(characterName);
-          message.reply({ content: `JSON for '${characterName}' fetched.`, files: [jsonPath] });
-        } catch (err) {
-          message.reply(`Error fetching JSON: ${err.message}`);
-        }
-      }
 
-      // Generate and send character sheet PDF command
-      if (command === '!read') {
-        if (!args[0]) {
-          message.reply('Usage: !read <characterName>');
-          return;
-        }
-        const characterName = args[0];
-        const { characterSheetToPDF } = require('./commands/characterSheetToPDF');
-        characterSheetToPDF(characterName, (err, pdfPath) => {
-          if (err) {
-            message.reply(`Error generating PDF: ${err.message}`);
-            return;
-          }
-          message.reply({ content: `PDF for '${characterName}' generated.`, files: [pdfPath] });
-        });
-      }
       console.log(`Received message: '${message.content}' from ${message.author.tag} in #${message.channel.name}`);
       if (message.author.bot) return;
       if (!message.content || message.content.trim() === '') return;
@@ -172,7 +139,7 @@ function startBot() {
           }
           break;
         }
-        case '!read': {
+        case COMMANDS.READ: {
           if (!args[0]) {
             message.reply('Usage: !read <characterName>');
             return;
@@ -228,7 +195,23 @@ function startBot() {
           }
           break;
         }
-        case '!store': {
+        case COMMANDS.SKILLCHECK: {
+          if (!args[0] || !args[1]) {
+            message.reply(USAGE.SKILLCHECK);
+            return;
+          }
+          const characterName = args[0];
+          const skillName = args[1];
+          const { skillCheck } = require('./commands/skillcheck');
+          try {
+            const result = skillCheck(characterName, skillName);
+            message.reply(`Skillcheck for '${characterName}' (${skillName}):\nRoll: ${result.roll}\nSkill Value: ${result.skillValue}\nTotal: ${result.total}`);
+          } catch (err) {
+            message.reply(`Error: ${err.message}`);
+          }
+          break;
+        }
+        case COMMANDS.STORE: {
           if (!args[0]) {
             message.reply('Usage: !store <characterName> <characterSheetJSON>');
             return;
@@ -258,9 +241,13 @@ function startBot() {
     }
   );
 
-  client.login(process.env.DISCORD_BOT_TOKEN);
+  client.login(process.env.DISCORD_TOKEN);
+  // Log the token status for debugging (do not print the token itself)
+  if (!process.env.DISCORD_TOKEN) {
+    console.error('[ERROR] DISCORD_TOKEN is not set in environment variables.');
+  } else {
+    console.log('[INFO] DISCORD_TOKEN is set.');
+  }
 }
 
-module.exports = {
-  startBot
-};
+startBot();
