@@ -5,7 +5,7 @@ const COMMANDS = {
   SEARCH: '!search',
   FETCH: '!fetch',
   ADD: '!add',
-  ADD_HP: '!addhp'
+  ADD_HP: '!addhp',
   SKILLCHECK: '!skillcheck',
   READ: '!read',
   STORE: '!store'
@@ -16,7 +16,7 @@ const USAGE = {
   SEARCH: 'Please provide a keyword to search for, e.g., !search stealth',
   FETCH: 'Usage: !fetch <characterName>',
   ADD: 'Usage: !add <characterName> (attach JSON file)',
-  ADD_HP: 'Usage: !addhp <characterName> <value>'
+  ADD_HP: 'Usage: !addhp <characterName> <value>',
   SKILLCHECK: 'Usage: !skillcheck <characterName> <skillName>',
   READ: 'Usage: !read <characterName>',
   STORE: 'Usage: !store <characterName> <characterSheetJSON>'
