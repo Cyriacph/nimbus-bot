@@ -6,6 +6,7 @@ const dice = require('./commands/rollDice');
 const searchRules = require('./commands/searchRules');
 const { COMMANDS, USAGE } = require('./constants/commands');
 const { SEARCH_USAGE } = require('./constants/search');
+const characterSheetUtils = require('./utils/characterSheetUtils');
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
 client.on('ready', () => {
@@ -256,26 +257,21 @@ function startBot() {
             return;
           }
           const characterName = args[0];
-          const safeName = characterName.replace(/[^a-zA-Z0-9_-]/g, '_');
-          const filePath = require('path').join(__dirname, '..', 'character_sheets', `${safeName}.json`);
-          const fs = require('fs');
-          if (!fs.existsSync(filePath)) {
+          let sheet;
+          try {
+            sheet = characterSheetUtils.loadCharacterSheet(characterName);
+          } catch (err) {
             message.reply(`No character sheet found for '${characterName}'.`);
             return;
           }
-          try {
-            const sheet = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-            const info = sheet.character_sheet;
-            let reply = `**Character Name:** ${info.basic_details.character_name}\n`;
-            reply += `**Ancestry:** ${info.basic_details.ancestry}\n`;
-            reply += `**Class:** ${info.basic_details.class}\n`;
-            reply += `**Level:** ${info.basic_details.level}\n`;
-            reply += `**HP:** ${info.hit_points.current}/${info.hit_points.max}\n`;
-            reply += `**Wounds:** ${info.wounds.current}/${info.wounds.max}`;
-            message.reply(reply);
-          } catch (err) {
-            message.reply(`Error reading character sheet: ${err.message}`);
-          }
+          const info = sheet.character_sheet;
+          let reply = `**Character Name:** ${info.basic_details.character_name}\n`;
+          reply += `**Ancestry:** ${info.basic_details.ancestry}\n`;
+          reply += `**Class:** ${info.basic_details.class}\n`;
+          reply += `**Level:** ${info.basic_details.level}\n`;
+          reply += `**HP:** ${info.hit_points.current}/${info.hit_points.max}\n`;
+          reply += `**Wounds:** ${info.wounds.current}/${info.wounds.max}`;
+          message.reply(reply);
           break;
         }
         default:
