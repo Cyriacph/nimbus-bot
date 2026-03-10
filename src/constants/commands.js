@@ -8,7 +8,8 @@ const COMMANDS = {
   ADD_HP: '!addhp',
   SKILLCHECK: '!skillcheck',
   READ: '!read',
-  STORE: '!store'
+  STORE: '!store',
+  MAX_HP: '!maxhp'
 };
 
 const USAGE = {
@@ -19,7 +20,8 @@ const USAGE = {
   ADD_HP: 'Usage: !addhp <characterName> <value>',
   SKILLCHECK: 'Usage: !skillcheck <characterName> <skillName>',
   READ: 'Usage: !read <characterName>',
-  STORE: 'Usage: !store <characterName> <characterSheetJSON>'
+  STORE: 'Usage: !store <characterName> <characterSheetJSON>',
+  MAX_HP: 'Usage: !maxhp <characterName> <value>'
 };
 
 module.exports = {

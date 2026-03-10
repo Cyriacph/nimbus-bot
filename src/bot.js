@@ -234,6 +234,26 @@ function startBot() {
           }
           break;
         }
+        case COMMANDS.MAX_HP: {
+          if (args.length < 2) {
+            message.reply(USAGE.MAX_HP);
+            return;
+          }
+          const characterName = args[0];
+          const value = parseInt(args[1]);
+          if (isNaN(value)) {
+            message.reply('Value must be a number.');
+            return;
+          }
+          const { maxHP } = require('./commands/maxHP');
+          try {
+            const newMaxHP = maxHP(characterName, value);
+            message.reply(`Updated max HP for '${characterName}' to ${value}`);
+          } catch (err) {
+            message.reply(`Error updating max HP: ${err.message}`);
+          }
+          break;
+        }
         default:
           // Optionally handle unknown commands or do nothing
           break;
