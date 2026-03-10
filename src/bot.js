@@ -251,29 +251,6 @@ function startBot() {
           }
           break;
         }
-        case '!character': {
-          if (!args[0]) {
-            message.reply('Usage: !character <characterName>');
-            return;
-          }
-          const characterName = args[0];
-          let sheet;
-          try {
-            sheet = characterSheetUtils.loadCharacterSheet(characterName);
-          } catch (err) {
-            message.reply(`No character sheet found for '${characterName}'.`);
-            return;
-          }
-          const info = sheet.character_sheet;
-          let reply = `**Character Name:** ${info.basic_details.character_name}\n`;
-          reply += `**Ancestry:** ${info.basic_details.ancestry}\n`;
-          reply += `**Class:** ${info.basic_details.class}\n`;
-          reply += `**Level:** ${info.basic_details.level}\n`;
-          reply += `**HP:** ${info.hit_points.current}/${info.hit_points.max}\n`;
-          reply += `**Wounds:** ${info.wounds.current}/${info.wounds.max}`;
-          message.reply(reply);
-          break;
-        }
         default:
           // Optionally handle unknown commands or do nothing
           break;
