@@ -234,6 +234,23 @@ function startBot() {
           }
           break;
         }
+      case COMMANDS.UPDATE_ATTRIBUTE: {
+          if (args.length < 3) {
+            message.reply(USAGE.UPDATE_ATTRIBUTE);
+            return;
+          }
+          const characterName = args[0];
+          const attribute = args[1];
+          const value = args[2];
+          const { updateAttribute } = require('./commands/updateAttribute');
+          try {
+            const newValue = updateAttribute(characterName, attribute, value);
+            message.reply(`Updated '${attribute}' for '${characterName}' to ${newValue}.`);
+          } catch (err) {
+            message.reply(`Error updating attribute: ${err.message}`);
+          }
+          break;
+        }
         default:
           // Optionally handle unknown commands or do nothing
           break;
