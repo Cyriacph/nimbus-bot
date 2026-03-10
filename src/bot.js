@@ -177,6 +177,7 @@ function startBot() {
         } catch (err) {
           message.reply(`Error: ${err.message}`);
         }
+      }
       case COMMANDS.MAX_HP: {
         if (args.length < 2) {
           message.reply(USAGE.MAX_HP);
