@@ -9,7 +9,8 @@ const COMMANDS = {
   SKILLCHECK: '!skillcheck',
   READ: '!read',
   STORE: '!store',
-  SET_STATS: '!setstats'
+  SET_STATS: '!setstats',
+  MAX_HP: '!maxhp'
 };
 
 const USAGE = {
@@ -21,7 +22,8 @@ const USAGE = {
   SKILLCHECK: 'Usage: !skillcheck <characterName> <skillName>',
   READ: 'Usage: !read <characterName>',
   STORE: 'Usage: !store <characterName> <characterSheetJSON>',
-  SET_STATS: 'Usage: !setstats <characterName> <stat> <value>'
+  SET_STATS: 'Usage: !setstats <characterName> <stat> <value>',
+  MAX_HP: 'Usage: !maxhp <characterName> <value>'
 };
 
 module.exports = {
