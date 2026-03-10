@@ -1,4 +1,4 @@
-require("dotenv").config();
+      require("dotenv").config();
 // Enable Discord.js debug output
 process.env.DEBUG = "discord.js:*";
 const { Client, GatewayIntentBits } = require("discord.js");
@@ -263,7 +263,22 @@ function startBot() {
           }
           break;
       }
-
+      case COMMANDS.UPSKILL: {
+        if (!args[0] || !args[1]) {
+          message.reply(USAGE.UPSKILL);
+          return;
+        }
+        const characterName = args[0];
+        const skillName = args[1];
+        const { upskill } = require('./commands/upskill');
+        try {
+          const newBonus = upskill(characterName, skillName);
+          message.reply(`Skill '${skillName}' bonus for '${characterName}' incremented to ${newBonus}.`);
+        } catch (err) {
+          message.reply(`Error incrementing skill bonus: ${err.message}`);
+        }
+        break;
+      }
       default:
         // Optionally handle unknown commands
         break;
