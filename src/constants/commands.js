@@ -9,7 +9,7 @@ const COMMANDS = {
   SKILLCHECK: '!skillcheck',
   READ: '!read',
   STORE: '!store',
-  UPDATE_ATTRIBUTE: '!updateattribute'
+  SET_STATS: '!setstats'
 };
 
 const USAGE = {
@@ -21,7 +21,7 @@ const USAGE = {
   SKILLCHECK: 'Usage: !skillcheck <characterName> <skillName>',
   READ: 'Usage: !read <characterName>',
   STORE: 'Usage: !store <characterName> <characterSheetJSON>',
-  UPDATE_ATTRIBUTE: 'Usage: !updateAttribute <characterName> <attribute> <value> (value must be 0-20)'
+  SET_STATS: 'Usage: !setstats <characterName> <stat> <value>'
 };
 
 module.exports = {

@@ -234,20 +234,20 @@ function startBot() {
           }
           break;
         }
-        case COMMANDS.UPDATE_ATTRIBUTE: {
+        case COMMANDS.SET_STATS: {
           if (args.length < 3) {
-            message.reply(USAGE.UPDATE_ATTRIBUTE);
+            message.reply(USAGE.SET_STATS);
             return;
           }
           const characterName = args[0];
-          const attribute = args[1];
+          const stat = args[1];
           const value = args[2];
-          const { updateAttribute } = require('./commands/updateAttribute');
+          const { setStats } = require('./commands/setStats');
           try {
-            const newValue = updateAttribute(characterName, attribute, value);
-            message.reply(`Updated '${attribute}' for '${characterName}' to ${newValue}.`);
+            const newValue = setStats(characterName, stat, value);
+            message.reply(`Updated '${stat}' for '${characterName}' to ${newValue}.`);
           } catch (err) {
-            message.reply(`Error updating attribute: ${err.message}`);
+            message.reply(`Error updating stat: ${err.message}`);
           }
           break;
         }
