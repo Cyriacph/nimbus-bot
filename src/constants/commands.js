@@ -9,7 +9,7 @@ const COMMANDS = {
   SKILLCHECK: '!skillcheck',
   READ: '!read',
   STORE: '!store',
-  UPDATE_ATTRIBUTE: '!updateAttribute'
+  UPDATE_ATTRIBUTE: '!updateattribute'
 };
 
 const USAGE = {

@@ -234,7 +234,7 @@ function startBot() {
           }
           break;
         }
-      case COMMANDS.UPDATE_ATTRIBUTE: {
+        case COMMANDS.UPDATE_ATTRIBUTE: {
           if (args.length < 3) {
             message.reply(USAGE.UPDATE_ATTRIBUTE);
             return;
