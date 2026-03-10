@@ -11,11 +11,11 @@
     },
     "stats": {
       "strength": {
-        "value": 10,
+        "value": 2,
         "save": "neutral"
       },
       "dexterity": {
-        "value": 0,
+        "value": 2,
         "save": "neutral"
       },
       "intelligence": {
@@ -23,7 +23,7 @@
         "save": "neutral"
       },
       "will": {
-        "value": 0,
+        "value": -1,
         "save": "neutral"
       }
     },
@@ -44,16 +44,16 @@
       "used": 0
     },
     "skills": {
-      "arcana": 1,
-      "examination": 0,
-      "finesse": 0,
-      "influence": 0,
-      "insight": 0,
-      "lore": 0,
-      "might": 0,
-      "naturecraft": 0,
-      "perception": 2,
-      "stealth": -1
+      "arcana": { "base": "intelligence", "bonus": 0 },
+      "examination": { "base": "intelligence", "bonus": 0 },
+      "finesse": { "base": "dexterity", "bonus": 0 },
+      "influence": { "base": "will", "bonus": 0 },
+      "insight": { "base": "will", "bonus": 0 },
+      "lore": { "base": "intelligence", "bonus": 0 },
+      "might": { "base": "strength", "bonus": 0 },
+      "naturecraft": { "base": "intelligence", "bonus": 0 },
+      "perception": { "base": "will", "bonus": 0 },
+      "stealth": { "base": "dexterity", "bonus": 0 }
     },
     "equipment": [],
     "languages": [],

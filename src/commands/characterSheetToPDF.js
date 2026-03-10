@@ -43,8 +43,12 @@ function characterSheetToPDF(characterName, callback) {
     });
     doc.moveDown();
     doc.text('Skills:');
-    Object.entries(sheet.skills).forEach(([skill, val]) => {
-        doc.text(`  ${skill.charAt(0).toUpperCase() + skill.slice(1)}: ${val}`);
+    Object.entries(sheet.skills).forEach(([skill, skillObj]) => {
+        const statName = skillObj.base;
+        const statValue = sheet.stats[statName]?.value ?? 0;
+        const bonus = skillObj.bonus ?? 0;
+        const skillValue = statValue + bonus;
+        doc.text(`  ${skill.charAt(0).toUpperCase() + skill.slice(1)}: ${skillValue}`);
     });
     doc.moveDown();
     doc.text('Equipment:');

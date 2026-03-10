@@ -23,7 +23,11 @@ function skillCheck(characterName, skillName) {
     if (!(skillName in skills)) {
         throw new Error(`Skill '${skillName}' not found.`);
     }
-    const skillValue = skills[skillName];
+    const skillObj = skills[skillName];
+    const statName = skillObj.base;
+    const statValue = sheet.character_sheet.stats[statName]?.value ?? 0;
+    const bonus = skillObj.bonus ?? 0;
+    const skillValue = statValue + bonus;
     // Roll 1d20 + skillValue
     const roll = Math.floor(Math.random() * 20) + 1;
     const total = roll + skillValue;
