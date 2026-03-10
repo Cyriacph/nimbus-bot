@@ -255,3 +255,11 @@ function startBot() {
           // Optionally handle unknown commands or do nothing
           break;
       }
+    });
+
+    client.login(process.env.DISCORD_BOT_TOKEN);
+}
+
+module.exports = {
+  startBot
+};
