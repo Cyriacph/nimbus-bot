@@ -10,17 +10,36 @@
       "hit_dice": ""
     },
     "stats": {
-      "strength": { "value": 0, "save": "neutral" },
-      "dexterity": { "value": 0, "save": "neutral" },
-      "intelligence": { "value": 0, "save": "neutral" },
-      "will": { "value": 0, "save": "neutral" }
+      "strength": { "value": 0, "save": false },
+      "dexterity": { "value": 0, "save": false },
+      "intelligence": { "value": 0, "save": false },
+      "will": { "value": 0, "save": false }
     },
-    "hit_points": { "current": 0, "max": 0, "temp_hp": 0 },
-    "wounds": { "current": 0, "max": 0 },
-    "armor": 0,
-    "initiative": 0,
-    "speed": 0,
-    "inventory_slots": { "total": 0, "used": 0 },
+    "hit_points": {
+      "current": 0,
+      "max": 0,
+      "temp_hp": 0
+    },
+    "wounds": {
+      "current": 0,
+      "max": 0
+    },
+    "armor": {
+      "base": 0,
+      "modifier": 0
+    },
+    "initiative": {
+      "base": 0,
+      "modifier": 0
+    },
+    "speed": {
+      "base": 0,
+      "modifier": 0
+    },
+    "inventory_slots": {
+      "total": 0,
+      "used": 0
+    },
     "skills": {
       "arcana": 0,
       "examination": 0,
