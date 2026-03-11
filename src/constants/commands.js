@@ -10,7 +10,8 @@ const COMMANDS = {
   READ: '!read',
   STORE: '!store',
   SET_STATS: '!setstats',
-  MAX_HP: '!maxhp'
+  MAX_HP: '!maxhp',
+  INITIATIVE: '!initiative'
 };
 
 const USAGE = {
@@ -23,7 +24,8 @@ const USAGE = {
   READ: 'Usage: !read <characterName>',
   STORE: 'Usage: !store <characterName> <characterSheetJSON>',
   SET_STATS: 'Usage: !setstats <characterName> <stat> <value>',
-  MAX_HP: 'Usage: !maxhp <characterName> <value>'
+  MAX_HP: 'Usage: !maxhp <characterName> <value>',
+  INITIATIVE: 'Usage: !initiative <characterName>'
 };
 
 module.exports = {
