@@ -40,12 +40,16 @@ function roll(notation) {
     }
     const rolls = rollDice(numDice, numFaces);
     const total = rolls.reduce((a, b) => a + b, 0) + modifier;
+    const isCritSuccess = numFaces == 20 && rolls.includes(20);
+    const isCritFailure = numFaces == 20 && rolls.includes(1);
     return {
         rolls,
         modifier,
         total,
         numDice,
-        numFaces
+        numFaces,
+        isCritSuccess,
+        isCritFailure
     };
 }
 

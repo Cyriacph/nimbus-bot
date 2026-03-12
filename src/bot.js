@@ -133,6 +133,8 @@ function startBot() {
           if (result.modifier !== 0)
             reply += ` ${result.modifier > 0 ? "+" : "-"} ${Math.abs(result.modifier)}`;
           reply += `\nTotal: ${result.total}`;
+          if (result.isCritSuccess) reply += `\n${require('./constants/dice').CRIT_SUCCESS_MSG}`;
+          if (result.isCritFailure) reply += `\n${require('./constants/dice').CRIT_FAILURE_MSG}`;
           message.reply(reply);
         } catch (err) {
           if (err.name && err.message)
@@ -299,9 +301,12 @@ function startBot() {
         const { initiative } = require('./commands/initiative');
         try {
           const result = initiative(characterName);
-          message.reply(
-            `Initiative for '${characterName}':\nRoll: ${result.initiativeRoll.rolls}\nTotal Initiative: ${result.initiativeRoll.total}
-            \n${result.actions} action(s) to start with.`);
+          let reply = `Initiative for '${characterName}':\nRoll: ${result.initiativeRoll.rolls}\nTotal Initiative: ${result.initiativeRoll.total}
+            \n${result.actions} action(s) to start with.`;
+          if (result.isCritSuccess) reply += `\n${require('./constants/dice').CRIT_SUCCESS_MSG}`;
+          if (result.isCritFailure) reply += `\n${require('./constants/dice').CRIT_FAILURE_MSG}`;
+          
+          message.reply(reply);
         } catch (err)  {
           message.reply(`Error rolling initiative: ${err.message}`);
         }
