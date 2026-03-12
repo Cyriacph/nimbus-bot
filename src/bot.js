@@ -7,6 +7,7 @@ const searchRules = require("./commands/searchRules");
 const { COMMANDS, USAGE } = require("./constants/commands");
 const { SEARCH_USAGE } = require("./constants/search");
 const characterSheetUtils = require("./utils/characterSheetUtils");
+const { handleConditionCommand } = require("./commands/condition");
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
@@ -312,6 +313,11 @@ function startBot() {
         }
         break;
       } 
+
+      case COMMANDS.CONDITION: {
+        handleConditionCommand(message, args);
+        break;
+      }
 
       default:
         // Optionally handle unknown commands

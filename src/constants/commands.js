@@ -12,7 +12,8 @@ const COMMANDS = {
   SET_STATS: '!setstats',
   MAX_HP: '!maxhp',
   UPSKILL: "Usage: !upskill <characterName> <skillName>",
-  INITIATIVE: '!initiative'
+  INITIATIVE: '!initiative',
+  CONDITION: '!condition'
 };
 
 const USAGE = {
@@ -26,7 +27,8 @@ const USAGE = {
   STORE: 'Usage: !store <characterName> <characterSheetJSON>',
   SET_STATS: 'Usage: !setstats <characterName> <stat> <value>',
   MAX_HP: 'Usage: !maxhp <characterName> <value>',
-  INITIATIVE: 'Usage: !initiative <characterName>'
+  INITIATIVE: 'Usage: !initiative <characterName>',
+  CONDITION: 'Usage: !condition <characterName> <condition_name>\nDescription: Toggle a condition for a character.'
 };
 
 module.exports = {
