@@ -177,6 +177,30 @@ function startBot() {
         } catch (err) {
           message.reply(`Error: ${err.message}`);
         }
+        break;
+      }
+      case COMMANDS.UPSKILL: {
+        if (!args[0] || !args[1]) {
+          message.reply("Usage: !upskill <characterName> <skillName>");
+          return;
+        }
+
+        const characterName = args[0];
+        const skillName = args[1].toLowerCase();
+
+        const { upskill } = require("./commands/upskill");
+
+        try {
+          const newValue = upskill(characterName, skillName);
+
+          message.reply(
+            `Skill '${skillName}' for '${characterName}' increased to ${newValue}.`,
+          );
+        } catch (err) {
+          message.reply(`Error: ${err.message}`);
+        }
+
+        break;
       }
       case COMMANDS.MAX_HP: {
         if (args.length < 2) {
@@ -186,10 +210,10 @@ function startBot() {
         const characterName = args[0];
         const value = parseInt(args[1]);
         if (isNaN(value)) {
-          message.reply('Value must be a number.');
+          message.reply("Value must be a number.");
           return;
         }
-        const { maxHP } = require('./commands/maxHP');
+        const { maxHP } = require("./commands/maxHP");
         try {
           const newMaxHP = maxHP(characterName, value);
           message.reply(`Updated max HP for '${characterName}' to ${value}`);
@@ -245,23 +269,25 @@ function startBot() {
         }
         break;
       }
-        
+
       case COMMANDS.SET_STATS: {
-          if (args.length < 3) {
-            message.reply(USAGE.SET_STATS);
-            return;
-          }
-          const characterName = args[0];
-          const stat = args[1];
-          const value = args[2];
-          const { setStats } = require('./commands/setStats');
-          try {
-            const newValue = setStats(characterName, stat, value);
-            message.reply(`Updated '${stat}' for '${characterName}' to ${newValue}.`);
-          } catch (err) {
-            message.reply(`Error updating stat: ${err.message}`);
-          }
-          break;
+        if (args.length < 3) {
+          message.reply(USAGE.SET_STATS);
+          return;
+        }
+        const characterName = args[0];
+        const stat = args[1];
+        const value = args[2];
+        const { setStats } = require("./commands/setStats");
+        try {
+          const newValue = setStats(characterName, stat, value);
+          message.reply(
+            `Updated '${stat}' for '${characterName}' to ${newValue}.`,
+          );
+        } catch (err) {
+          message.reply(`Error updating stat: ${err.message}`);
+        }
+        break;
       }
 
       default:
