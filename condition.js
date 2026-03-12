@@ -3,7 +3,6 @@
  * Adds or removes a condition from a player and displays its effects.
  */
 
-// Словарь состояний из правил
 const CONDITIONS_DB = {
     "blinded": "Can't see. Attacks against you have advantage, and your attacks have disadvantage.",
     "bloodied": "At half HP or less.",
