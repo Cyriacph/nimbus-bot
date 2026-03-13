@@ -29,8 +29,9 @@ function damage(characterName, amount) {
             amount -= tempHPReduction; // Reduce the amount to subtract from current HP
         }
         let newHP = currentHP - amount;
-        if (newHP < 0) {
+        if (newHP <= 0) {
             newHP = 0;
+            //TODO: Mark character as DYING
         }
         sheet.hit_points.current = newHP;
 
