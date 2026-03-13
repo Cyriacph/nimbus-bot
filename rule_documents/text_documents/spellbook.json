@@ -1,0 +1,564 @@
+{
+  "spells": {
+    "fire": [
+      {
+        "name": "Flame Dart",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "8",
+        "damage": "1d10",
+        "effect": "On crit: Smoldering.",
+        "high_levels": "+5 damage every 5 levels",
+        "description": "With enough practice, anything can become a dart board!"
+      },
+      {
+        "name": "Heart's Fire",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "4",
+        "effect": "Give an ally within Range an extra action. Spend 1 mana to cast this when it is not your turn.",
+        "high_levels": "+1 Range every 5 levels",
+        "description": "Kindle heroic purpose."
+      },
+      {
+        "name": "Ignite",
+        "tier": "1",
+        "cost": "2 Actions",
+        "type": "Single Target",
+        "range": "8",
+        "damage": "4d10 to a Smoldering target, ending the condition on hit.",
+        "upcast": "+10 damage",
+        "description": "The flames do not consume flesh—but hope."
+      },
+      {
+        "name": "Enchant Weapon",
+        "tier": "2",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "duration": "Concentration, up to 1 minute",
+        "effect": "A weapon you touch is enchanted with magical flame. It deals +KEY damage and inflicts Smoldering on crit.",
+        "upcast": "+KEY damage",
+        "description": "It's like a regular dagger, but SPICY!"
+      },
+      {
+        "name": "Flame Barrier",
+        "tier": "3",
+        "cost": "1 Action",
+        "type": "Self",
+        "effect": "Defend for free. Until the start of your next turn, melee attackers against you take KEY damage (ignoring armor) and gain Smoldering.",
+        "upcast": "+KEY damage",
+        "description": "I SAID, 'hands off!'"
+      },
+      {
+        "name": "Pyroclasm",
+        "tier": "4",
+        "cost": "2 Actions",
+        "type": "AoE",
+        "range": "Reach 3",
+        "damage": "2d20+10 damage (ignoring armor) on a failed DEX save. Half damage on save. Smoldering creatures fail.",
+        "upcast": "+1 Reach, +2 damage",
+        "description": "Boom."
+      },
+      {
+        "name": "Fiery Embrace",
+        "tier": "5",
+        "cost": "2 Actions",
+        "type": "AoE",
+        "duration": "Concentration, up to 1 minute",
+        "range": "Reach 8",
+        "effect": "While within Reach: 1 ally gains the effects of Enchant Weapon. Enemies gain Smoldering, lose damage resistance, and their damage immunity is reduced to resistance.",
+        "upcast": "+1 ally",
+        "description": "Less 'warm and fuzzy,' more 'burnt and crispy.'"
+      },
+      {
+        "name": "Living Inferno",
+        "tier": "7",
+        "cost": "3 Actions",
+        "type": "Self",
+        "effect": "Gain the effects of Flame Barrier until your next turn. At the end of this turn and your next turn, cast Pyroclasm for free.",
+        "upcast": "Upcast Flame Barrier and Pyroclasm",
+        "description": "Ever since falling into a spider's burrow, Gregor's never been the same—and neither have the spiders."
+      },
+      {
+        "name": "Dragonform",
+        "tier": "9",
+        "cost": "5 Actions",
+        "type": "Self",
+        "effect": "Transform into a Huge dragon. Gain 3 actions, a fly speed of 12, LVL Armor, 10×LVL temp HP, and special abilities.",
+        "abilities": [
+          {
+            "name": "Tooth & Claw",
+            "description": "Action: (Reach 2) 1d20+LVL damage (ignoring armor). Inflicts Smoldering."
+          },
+          {
+            "name": "Immolating Breath",
+            "description": "2 Actions: (Reach: Cone 8). DC 20 DEX save, KEY d20 damage, half on save. Smoldering targets fail."
+          }
+        ],
+        "description": "Oh..."
+      }
+    ],
+    "ice": [
+      {
+        "name": "Ice Lance",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "12",
+        "damage": "1d6 cold/piercing",
+        "effect": "On hit: Slowed.",
+        "high_levels": "+3 damage every 5 levels",
+        "description": "Pierced by winter's wrath!"
+      },
+      {
+        "name": "Snowblind",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "1",
+        "damage": "1d6",
+        "effect": "On hit: Blinded until the end of their next turn.",
+        "high_levels": "+3 damage every 5 levels",
+        "description": "Everyone always says blind is dark, nope... blind is COLD!"
+      },
+      {
+        "name": "Frost Shield",
+        "tier": "1",
+        "cost": "1 Action",
+        "type": "Self",
+        "effect": "Gain 2×KEY temp HP and Defend for free. The ice melts and these temp HP are lost at the start of your next turn.",
+        "upcast": "+2×KEY temp HP",
+        "description": "Most seek refuge from the cold; for us, the cold IS our refuge."
+      },
+      {
+        "name": "Shatter",
+        "tier": "2",
+        "cost": "2 Actions",
+        "type": "Single Target",
+        "range": "12",
+        "damage": "3d6. If any die rolls the max against a Hampered target, this counts as a crit. On crit: +20 damage.",
+        "upcast": "Increase the result of ANY die by 1. +5 damage on crit.",
+        "description": "The sound it makes is beautiful—if you're not standing too close."
+      },
+      {
+        "name": "Cryosleep",
+        "tier": "3",
+        "cost": "2 Actions",
+        "type": "AoE",
+        "range": "Reach 12",
+        "effect": "Creatures in a 2×2 area within Reach are Dazed. On a failed STR save, they fall asleep instead, becoming Incapacitated until their next two turns have passed, until damaged, or until an ally uses an action to wake them.",
+        "upcast": "+1 area, +1 turn asleep",
+        "description": "The snow whispers, 'Hush now.'"
+      },
+      {
+        "name": "Rimeblades",
+        "tier": "4",
+        "cost": "3 Actions",
+        "type": "AoE",
+        "duration": "Concentration, up to 1 minute",
+        "range": "Reach 12",
+        "effect": "Conjure razor-sharp icy spikes in 5 contiguous spaces within Reach; this area is difficult terrain. Creatures that enter these spaces (or who are in the area when you conjure them) suffer 2d6 damage for each space they touch.",
+        "upcast": "+1 space, +1 damage",
+        "description": "Step lightly, or not at all."
+      },
+      {
+        "name": "Arctic Blast",
+        "tier": "5",
+        "cost": "2 Actions",
+        "type": "AoE",
+        "range": "Reach Cone 4",
+        "damage": "4d6+10 damage. This area is difficult terrain until the end of your next turn. Surviving creatures must make a STR save or be frozen in place (Restrained) until the end of their next turn; creatures already Hampered are Incapacitated for 1 turn instead.",
+        "upcast": "+1 Reach",
+        "description": "A storm of ice answers my call!"
+      },
+      {
+        "name": "Glacier Strike",
+        "tier": "8",
+        "cost": "3 Actions",
+        "type": "AoE",
+        "range": "12",
+        "damage": "d66 bludgeoning to creatures in a 3×3 area. Creatures adjacent to that area take half as much. The entire area permanently becomes difficult terrain.",
+        "upcast": "+1 initial area",
+        "description": "The cold's bad, sure, but it's the smush that gets you!"
+      },
+      {
+        "name": "Arctic Annihilation",
+        "tier": "9",
+        "cost": "3 Actions",
+        "type": "AoE",
+        "range": "Reach 12",
+        "effect": "Choose any number of objects or willing creatures within Reach to encase in ice. They are Incapacitated and immune to damage and negative effects until the start of their next turn. All other creatures and objects within Reach take d66 damage. Any surviving creature who took this damage must make a STR save or be Incapacitated for 1 round.",
+        "note": "Once you cast this spell, you must Safe Rest for 1 week before using it again.",
+        "description": "Winter claims all."
+      }
+    ],
+    "lightning": [
+      {
+        "name": "Zap",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "12",
+        "damage": "2d8",
+        "effect": "On miss: the lightning fails to find ground, and strikes you instead.",
+        "high_levels": "+6 damage every 5 levels",
+        "description": "Remember to stay grounded, young mage, or the spell will gladly do it for you."
+      },
+      {
+        "name": "Overload",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "AoE",
+        "range": "Reach 2",
+        "damage": "2d8 to others within Reach",
+        "condition": "Castable only if you are Charged, ending the condition.",
+        "high_levels": "+4 damage every 5 levels",
+        "description": "That time I missed? Yeah, I did that on purpose!"
+      },
+      {
+        "name": "Arc Lightning",
+        "tier": "1",
+        "cost": "2 Actions",
+        "type": "Single Target",
+        "range": "12",
+        "damage": "3d8, also strikes the next closest creature to your target",
+        "effect": "On miss: the lightning fails to find ground and strikes you instead.",
+        "upcast": "+4 damage",
+        "description": "Lightning loves company—though it's rarely a pleasant reunion."
+      },
+      {
+        "name": "Alacrity",
+        "tier": "2",
+        "cost": "1 Action",
+        "type": "Self",
+        "range": "4",
+        "effect": "Defend for free. After damage is dealt, you gain the Charged condition then teleport anywhere within Range.",
+        "upcast": "+4 Range",
+        "description": "Alright, I'm outta here!"
+      },
+      {
+        "name": "Stormlash",
+        "tier": "3",
+        "cost": "2 Actions",
+        "type": "AoE",
+        "range": "Line 12",
+        "damage": "3d8+4 (ignoring metal armor)",
+        "effect": "Surviving creatures are Dazed on a failed STR save, or Incapacitated instead for 1 turn if they fail by 5 or more. Creatures with a large amount of metal (e.g., armor or a longsword) roll with disadvantage.",
+        "upcast": "+4 damage",
+        "description": "A serpent of stormlight."
+      },
+      {
+        "name": "Electrickery",
+        "tier": "4",
+        "cost": "3 Actions",
+        "type": "2 Targets",
+        "range": "8",
+        "effect": "Choose another creature within Range to swap places with your ally on a failed WIL save (they become the new target). Costs 1 Action while Charged, ending the condition.",
+        "upcast": "+2 Range",
+        "description": "Misdirection is the heart of magic."
+      },
+      {
+        "name": "Electrocharge",
+        "tier": "5",
+        "cost": "2 Actions",
+        "type": "Single Target",
+        "duration": "Concentration, up to 1 minute",
+        "effect": "A creature you touch gains the Charged condition, +1 max action, +5 armor, 2x speed, and advantage on DEX saves.",
+        "upcast": "+4 Range",
+        "description": "Ever wonder what it's like to drink lightning?"
+      },
+      {
+        "name": "Ride the Lightning",
+        "tier": "6",
+        "cost": "3 Actions",
+        "type": "AoE",
+        "effect": "Teleport up to 12 spaces away to a spot you can see (if a willing creature is there, swap places with them). Adjacent creatures take d88 damage. Surviving creatures must make a STR save or be hurled back 3 spaces, knocked Prone, and deafened for 1 day.",
+        "upcast": "+1 DC",
+        "description": "Horse? No. Ship? No... Lightning?! NOW WE'RE TALKING!"
+      },
+      {
+        "name": "Seething Storm",
+        "tier": "9",
+        "cost": "3 Actions",
+        "type": "AoE",
+        "duration": "Concentration, up to 1 minute",
+        "range": "Reach 4",
+        "effect": "You become a cloud of tempestuous storm. You can fly, move for free 1/round, and attacks against you are made with disadvantage. At the end of each of your turns, strike up to 4 creatures within Reach with a bolt of lightning for d88 damage (a creature can only be struck 1/round). +2 Reach and number of bolts each round. Costs 3 actions each round to maintain.",
+        "note": "Once you cast this spell, you must Safe Rest for 1 week before you can use it again.",
+        "description": "The sky bends to me, the clouds rage with me, and the world trembles below."
+      }
+    ],
+    "radiant": [
+      {
+        "name": "Rebuke",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "4",
+        "damage": "1d6 (ignoring armor), does not miss. 2× damage against undead or cowardly (those Frightened or behind cover).",
+        "high_levels": "+2 damage every 5 levels",
+        "description": "Justice always finds its mark."
+      },
+      {
+        "name": "True Strike",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "2",
+        "effect": "Give a creature advantage on the next attack they make (until the end of their next turn).",
+        "high_levels": "+1 Reach every 5 levels",
+        "description": "With conviction comes certainty."
+      },
+      {
+        "name": "Heal",
+        "tier": "1",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "1",
+        "effect": "Heal a creature 1d6+KEY HP.",
+        "upcast": "Choose one: +1 target, +4 Reach, +1d6 healing. If 5+ mana is spent, you may also heal 1 negative condition (e.g., Blind, Poisoned, 1 Wound).",
+        "description": "Let all who are afflicted come. I will mend thy bones and soothe thy wounds."
+      },
+      {
+        "name": "Warding Bond",
+        "tier": "2",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "duration": "1 minute",
+        "effect": "Designate a willing creature as your ward for 1 minute. They take half damage from all attacks; you are attacked for the other half.",
+        "upcast": "+1 creature",
+        "description": "I will be your shield and salvation."
+      },
+      {
+        "name": "Shield of Justice",
+        "tier": "3",
+        "cost": "1 Action",
+        "type": "Self",
+        "effect": "Defend for free and reflect Radiant damage back at the attacker equal to the amount blocked (ignoring armor).",
+        "upcast": "+5 Armor",
+        "description": "The righteous defend not with steel, but with unwavering resolve."
+      },
+      {
+        "name": "Condemn",
+        "tier": "4",
+        "cost": "2 Actions",
+        "type": "Single Target",
+        "range": "4",
+        "damage": "30. Can only target an enemy that crit you or an ally since your last turn. Cannot be reduced by any means. The next attack against that enemy is made with advantage.",
+        "upcast": "+1 Reach, +1 advantage",
+        "description": "For what you've done, there is no escape—only judgment."
+      },
+      {
+        "name": "Vengeance",
+        "tier": "5",
+        "cost": "2 Actions",
+        "type": "Single Target",
+        "range": "1",
+        "damage": "1d100, to a creature that attacked a Dying ally or reduced one to 0 HP since your last turn.",
+        "upcast": "+1 Reach, roll w/ advantage",
+        "description": "Justice must be proportional and meted out dispassionately; vengeance, however, has no such constraints."
+      },
+      {
+        "name": "Sacrifice",
+        "tier": "6",
+        "cost": "1 Action",
+        "type": "Special",
+        "range": "4",
+        "effect": "Reduce yourself to 0 HP. You cannot have more than 0 HP until you Safe Rest. Heal a number of HP equal to your maximum HP, divided as you choose to any other creatures within Reach. You may revive a creature that has died in the past minute if you give them at least 20 HP (also healing 2 Wounds from them), provided they have not been revived with this spell before.",
+        "upcast": "+4 Reach",
+        "description": "Greater love has no one than this, than to lay down one's life for his friends."
+      },
+      {
+        "name": "Redeem",
+        "tier": "9",
+        "cost": "24 hours",
+        "type": "AoE",
+        "range": "1 mile",
+        "effect": "Revive any number of deceased creatures you choose—within 1 mile—that have died in the past year, provided they have not died of old age or been revived with this spell before.",
+        "cost": "A diamond worth at least 10,000 gp, which this spell consumes.",
+        "description": "The power to undo death's hold is a heavy burden."
+      }
+    ],
+    "utility": [
+      {
+        "name": "Ice Disk",
+        "tier": "Cantrip",
+        "cost": "1 minute",
+        "effect": "Conjure a disk of ice that floats just above the ground and follows you. It can carry up to 250 lbs./115 kg of weight for 1 hour or until you cast this spell again."
+      },
+      {
+        "name": "Chillcraft",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "Harmlessly freeze, thaw, or move a bath-sized amount of water near you. OR: Conjure a sheet of opaque, mirror-like, or transparent ice the size of a window or small door."
+      },
+      {
+        "name": "Wintry Scrying",
+        "tier": "Cantrip",
+        "cost": "10 minutes",
+        "effect": "Turn a small patch of water into a reflective icy mirror. Looking though it grants you vision of any desired location near this same body of water for 10 minutes."
+      },
+      {
+        "name": "Firebrand",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "Touch a surface and secretly mark it with a symbol or brief message. Speaking a chosen command word while nearby reveals it."
+      },
+      {
+        "name": "Fire Step",
+        "tier": "Cantrip",
+        "cost": "1 minute",
+        "effect": "Teleport to a fire source you can see."
+      },
+      {
+        "name": "Kindle",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "Conjure a minor visual illusion. OR: Ignite a small, unheld item within Range 6."
+      },
+      {
+        "name": "Spark Buddy",
+        "tier": "Cantrip",
+        "cost": "1 minute",
+        "effect": "Conjure a Tiny (squirrel-sized) electrical helper for up to 1 hour. It can fetch Tiny objects (~1 lb./500 g max), open unlocked doors, illuminate a small area, or deliver a harmless shock."
+      },
+      {
+        "name": "Spark Step",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "range": "4",
+        "effect": "Teleport to a metal object."
+      },
+      {
+        "name": "Tempest’s Command",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "DISPEL a minor magical effect, or temporarily suppress a stronger one (the more powerful an enchantment, the shorter the duration). OR: Your eyes glow and your voice is amplified to a booming, thunder-like volume for 1 min."
+      },
+      {
+        "name": "Light",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "Cause an item to brightly glow as a torch with radiant light for as long as you hold it."
+      },
+      {
+        "name": "Beautify",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "Clean stains or repair a small tear/break in a non-magical item, or conjure tiny beautiful things: flowers, butterflies, etc."
+      },
+      {
+        "name": "Bond of Peace",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "BOND. Telepathically communicate simple thoughts or feelings with a friendly creature you can see. OR: PEACE. Imbue your spoken words with calming magic, granting advantage on any check made to soothe anger or fear in creatures who can hear you."
+      },
+      {
+        "name": "Wind Whisper",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "You whisper a message into the wind and it will be secretly carried to a specified target within 100 miles/160 km."
+      },
+      {
+        "name": "Helpful Gust",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "range": "6",
+        "effect": "Gently move a Tiny unheld item within Reach in any direction. OR: Generate an illusory scent."
+      },
+      {
+        "name": "Feather Fall",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "range": "6",
+        "effect": "REACTION: When a creature falls, cause them to gently float to the ground, unharmed."
+      },
+      {
+        "name": "Gravecraft",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "GRAVEMARK. Action: Soil a surface with blood, filth, or other disgusting things. OR: GRAVEWORK. Casting time 1 minute: Shape/move a body-sized plot of earth."
+      },
+      {
+        "name": "False Face",
+        "tier": "Cantrip",
+        "cost": "1 minute",
+        "effect": "Change your appearance to look like someone else for 10 minutes. Requires a piece of them."
+      },
+      {
+        "name": "Thought Leech",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "range": "6",
+        "effect": "Read the surface thoughts of a creature within Reach. Creatures can sense you doing this and may not like it."
+      },
+      {
+        "name": "Lifebinding Spirit",
+        "tier": "1",
+        "cost": "1 Action",
+        "effect": "Summon a spirit companion that follows you and is immune to harm. It lasts until you cast this spell again, take a Safe Rest, or it heals a number of times equal to the mana spent summoning it.",
+        "abilities": [
+          {
+            "name": "Attack or Heal",
+            "effect": "It attacks or heals a creature within Reach 4. It attacks for 1d6+WIL radiant damage (ignoring armor), or heals for the same amount."
+          }
+        ],
+        "upcast": "Increment its die size by 1 (max d12), +1 healing use.",
+        "description": "Your Lifebinding Spirit can take the form of any small friendly animal or similar creature (dog, lamb, rabbit, sparrow, etc.). Make sure you give your little buddy a name, too!"
+      },
+      {
+        "name": "Shadow Blast",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "8",
+        "damage": "1d12+KEY",
+        "high_levels": "+1d12 every 5 levels",
+        "description": "Castable only 1/round."
+      },
+      {
+        "name": "Shadow Blast",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "8",
+        "damage": "1d12+KEY",
+        "high_levels": "+1d12 every 5 levels",
+        "description": "One good reason to be afraid of the dark!"
+      },
+      {
+        "name": "Summon Shadow",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "effect": "Summon a shadow minion within Reach 1 (you can summon a max of INT or LVL minions this way, whichever is lower). Your shadow minions follow the normal minion rules: they have 1 HP, no damage bonus, and do not crit. They abandon you immediately outside of combat.",
+        "abilities": [
+          {
+            "name": "Command",
+            "effect": "(1/turn) you may command ALL of your minions to move up to 6 then attack (Reach 1, d12 each)."
+          }
+        ],
+        "high_levels": "+1 Reach every 5 levels",
+        "description": "When he smiles like that, stay far away."
+      }
+    ],
+    "potions": [
+      {
+        "name": "Healing Potion",
+        "action": "1 Action",
+        "effect": "Consume (or administer to an adjacent creature) to heal 2d4+4 HP."
+      },
+      {
+        "name": "Greater Healing Potion",
+        "action": "1 Action",
+        "effect": "Consume (or administer to an adjacent creature) to heal 3d6+6 HP."
+      },
+      {
+        "name": "Supreme Healing Potion",
+        "action": "1 Action",
+        "effect": "Consume (or administer to an adjacent creature) to heal 4d8+8 HP."
+      }
+    ]
+  }
+}
