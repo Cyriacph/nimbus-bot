@@ -16,6 +16,7 @@ const COMMANDS = {
   WOUND: '!wound',
   UPSKILL: "Usage: !upskill <characterName> <skillName>",
   INITIATIVE: '!initiative',
+  CONDITION: '!condition',
   ALLSPELLS: '!allspells'
 };
 
@@ -31,6 +32,7 @@ const USAGE = {
   SET_STATS: 'Usage: !setstats <characterName> <stat> <value>',
   MAX_HP: 'Usage: !maxhp <characterName> <value>',
   INITIATIVE: 'Usage: !initiative <characterName>',
+  CONDITION: 'Usage: !condition <characterName> <condition_name>\nDescription: Toggle a condition for a character.',
   ALLSPELLS: 'Usage: !allspells',
   DAMAGE: 'Usage: !damage <characterName> <amount>',
   HEAL: 'Usage: !heal <characterName> <amount>',
