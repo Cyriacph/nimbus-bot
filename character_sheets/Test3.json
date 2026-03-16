@@ -29,7 +29,7 @@
     },
     "hit_points": {
       "current": 0,
-      "max": 0,
+      "max": 20,
       "temp_hp": 0
     },
     "wounds": {
@@ -44,16 +44,46 @@
       "used": 0
     },
     "skills": {
-      "arcana": { "base": "intelligence", "bonus": 0 },
-      "examination": { "base": "intelligence", "bonus": 0 },
-      "finesse": { "base": "dexterity", "bonus": 0 },
-      "influence": { "base": "will", "bonus": 0 },
-      "insight": { "base": "will", "bonus": 0 },
-      "lore": { "base": "intelligence", "bonus": 0 },
-      "might": { "base": "strength", "bonus": 0 },
-      "naturecraft": { "base": "intelligence", "bonus": 0 },
-      "perception": { "base": "will", "bonus": 0 },
-      "stealth": { "base": "dexterity", "bonus": 0 }
+      "arcana": {
+        "base": "intelligence",
+        "bonus": 0
+      },
+      "examination": {
+        "base": "intelligence",
+        "bonus": 0
+      },
+      "finesse": {
+        "base": "dexterity",
+        "bonus": 0
+      },
+      "influence": {
+        "base": "will",
+        "bonus": 0
+      },
+      "insight": {
+        "base": "will",
+        "bonus": 0
+      },
+      "lore": {
+        "base": "intelligence",
+        "bonus": 0
+      },
+      "might": {
+        "base": "strength",
+        "bonus": 0
+      },
+      "naturecraft": {
+        "base": "intelligence",
+        "bonus": 0
+      },
+      "perception": {
+        "base": "will",
+        "bonus": 0
+      },
+      "stealth": {
+        "base": "dexterity",
+        "bonus": 0
+      }
     },
     "equipment": [],
     "languages": [],

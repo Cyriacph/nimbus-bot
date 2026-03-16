@@ -311,12 +311,23 @@ function startBot() {
           message.reply(`Error rolling initiative: ${err.message}`);
         }
         break;
-      } 
+      }
+
+      case COMMANDS.ALLSPELLS: {
+        const allspellsModule = require('./commands/allspells');
+        try {
+          await allspellsModule.execute(message, args);
+        } catch (err) {
+          message.reply(`Error exporting spells to PDF: ${err.message}`);
+        }
+        break;
+      }
 
       default:
         // Optionally handle unknown commands
         break;
     }
+
   });
 
   client.login(process.env.DISCORD_TOKEN);

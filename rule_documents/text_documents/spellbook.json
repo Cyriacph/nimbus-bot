@@ -290,6 +290,134 @@
         "description": "The sky bends to me, the clouds rage with me, and the world trembles below."
       }
     ],
+    "wind": [
+      {
+        "name": "Razor Wind",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "12",
+        "damage": "1d4 slashing (Vicious)",
+        "effect": "Also damages up to 1 adjacent target.",
+        "high_levels": "+2 damage every 5 levels",
+        "description": "Wield the blade that never dulls."
+      },
+      {
+        "name": "Breath of Life",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "6",
+        "effect": "Restore 1 HP to a Dying creature.",
+        "high_levels": "+2 Range every 5 levels",
+        "description": "The gentlest breeze can reignite a dying flame."
+      },
+      {
+        "name": "Blustery Gale",
+        "tier": "1",
+        "cost": "2 Actions",
+        "type": "Single Target",
+        "range": "12",
+        "damage": "3d4 bludgeoning, advantage against flying, Small, or Tiny targets.",
+        "effect": "On hit: Move a Med target 2 spaces away; Small/Tiny twice as far; Large half as far (round down). For each die you would roll due to forced movement from this spell, deal +5 damage instead.",
+        "upcast": "+1 movement",
+        "description": "Now THIS is why I love cliffs!"
+      },
+      {
+        "name": "Barrier of Wind",
+        "tier": "2",
+        "cost": "1 Action",
+        "type": "Self",
+        "effect": "Defend for free. Ranged attacks have disadvantage against you this round (including the triggering attack).",
+        "upcast": "+3 Armor",
+        "description": "A bit windy in'it?"
+      },
+      {
+        "name": "Fly",
+        "tier": "3",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "duration": "Concentration, up to 10 minutes",
+        "effect": "Touch a creature, grant a flying speed of 12.",
+        "upcast": "+1 target",
+        "description": "WEEEEEE!!"
+      },
+      {
+        "name": "Eye of the Storm",
+        "tier": "4",
+        "cost": "2 Actions",
+        "type": "AoE",
+        "range": "Reach 3",
+        "damage": "4d4+10 bludgeoning to enemies within Reach.",
+        "effect": "You may place surviving creatures anywhere within 1 space of the storm's Reach on a failed STR save.",
+        "upcast": "+1 Reach",
+        "description": "You asked how I know a storm's coming?"
+      },
+      {
+        "name": "Updraft",
+        "tier": "5",
+        "cost": "3 Actions",
+        "type": "AoE",
+        "range": "Reach 12",
+        "effect": "Enemies within a 5×5 area must repeat a DEX save until they succeed. For each time they failed they suffer 1d6 falling damage and land prone.",
+        "upcast": "+2 Range, +1 area",
+        "description": "It's not the fall that gets you, it's the sudden stop."
+      },
+      {
+        "name": "Thousand Cuts",
+        "tier": "6",
+        "cost": "3 Actions",
+        "type": "AoE",
+        "range": "12",
+        "damage": "d44 slashing damage (roll with advantage), also damages enemies within Reach 1 of your target.",
+        "upcast": "+1 Reach",
+        "description": "D44 with advantage. Roll 3d4 and drop the lowest die. The leftmost die is the tens place, and the second is the ones (e.g., 2, 3, and 4 deals 34 damage).",
+        "special": "You’re going to need a LOT of bandages."
+      },
+      {
+        "name": "Boisterous Winds",
+        "tier": "7",
+        "cost": "2 Actions",
+        "type": "Multi-target",
+        "duration": "Concentration, up to 1 minute",
+        "effect": "You and up to 12 allies within Reach 12 gain: Ranged attacks have disadvantage against you, a flying speed of 12, and can move for free 1/round.",
+        "upcast": "+1 minute or +2 targets",
+        "description": "A tailwind for the brave, a headwind for the unworthy."
+      },
+      {
+        "name": "Wind Whisper",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "effect": "You whisper a message into the wind and it will be secretly carried to a specified target within 100 miles/160 km."
+      },
+      {
+        "name": "Helpful Gust",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "6",
+        "effect": "Gently move a Tiny unheld item within Reach in any direction. OR: Generate an illusory scent."
+      },
+      {
+        "name": "Feather Fall",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "6",
+        "effect": "REACTION: When a creature falls, cause them to gently float to the ground, unharmed."
+      },
+      {
+        "name": "Vicious Mockery",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "12",
+        "damage": "1d4+INT psychic (ignore physical armour",
+        "effect": "The is Taunted during their next turn.",
+        "high_levels": "+1 damage every 5 levels"
+      }
+    ],
     "radiant": [
       {
         "name": "Rebuke",
@@ -381,6 +509,126 @@
         "description": "The power to undo death's hold is a heavy burden."
       }
     ],
+    "necrotic": [
+      {
+        "name": "Entice",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "8",
+        "damage": "1d4 (ignoring armor)",
+        "effect": "On hit: target moves 2 spaces closer to you.",
+        "high_levels": "Increment the die 1 step every 5 levels (d6 » d8 » d10 » d12).",
+        "description": "We've got coOOookies!"
+      },
+      {
+        "name": "Withering Touch",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "1",
+        "damage": "1d12",
+        "effect": "On hit: Target is considered undead for 1 round.",
+        "high_levels": "+6 damage every 5 levels",
+        "description": "Last time I ever give you roses..."
+      },
+      {
+        "name": "Shadow Trap",
+        "tier": "1",
+        "cost": "2 Actions",
+        "type": "Single Target",
+        "concentration": "Up to 1 minute",
+        "effect": "The next creature to move adjacent to you suffers 3d12 damage; if Small or Tiny, it is also Restrained by shadowy tendrils for as long as you maintain concentration or until they escape.",
+        "upcast": "+1 size category, +1d12 damage when they escape",
+        "description": "When he smiles like that, stay far away."
+      },
+      {
+        "name": "Dread Visage",
+        "tier": "2",
+        "cost": "1 Action",
+        "type": "Self",
+        "effect": "Defend for free. Melee attackers are Frightened of you and suffer 1d12 damage if they attack you this round. Costs 2 mana less while dying.",
+        "upcast": "+2 damage, +2 armor",
+        "description": "I am become your dread and terror."
+      },
+      {
+        "name": "Vampiric Greed",
+        "tier": "3",
+        "cost": "2 Actions",
+        "type": "AoE",
+        "effect": "Gain 1 Wound. Deal 4d12 damage to all adjacent creatures, heal HP equal to the damage done. Any surviving creatures make a STR save. Gain 1 additional Wound for each creature that saves.",
+        "upcast": "+1 DC",
+        "description": "I feel MUCH better—and somehow, also worse."
+      },
+      {
+        "name": "Greater Shadow",
+        "tier": "4",
+        "cost": "2 Actions",
+        "type": "Summon",
+        "effect": "Summon a 5d12 Greater Shadow minion (max 1) adjacent to you. When it dies, it explodes into 5 shadow minions (see Summon Shadow). Place them anywhere within 8 spaces.",
+        "upcast": "+1d12, +1 shadow minion",
+        "description": "No, don't attack the big one!"
+      },
+      {
+        "name": "Gangrenous Burst",
+        "tier": "5",
+        "cost": "2 Actions",
+        "type": "AoE",
+        "range": "Up to 8",
+        "effect": "Other damaged creatures within Reach must make a STR save or take 3d20 damage (ignoring armor), half on save. The save is rolled with disadvantage while Bloodied.",
+        "upcast": "+1 Reach",
+        "description": "BAD idea to bleed near a necromancer."
+      },
+      {
+        "name": "Unspeakable Word",
+        "tier": "6",
+        "cost": "2 Actions",
+        "type": "Special",
+        "range": "8",
+        "damage": "d66 (with advantage, ignoring armor, does not miss or crit) on a failed INT save.",
+        "effect": "Target rolls with disadvantage if Bloodied or Frightened. On a success, you both take half of this damage instead.",
+        "upcast": "+1 DC, +10 damage",
+        "description": "I know a NAUGHTY word—wanna hear it?"
+      },
+      {
+        "name": "Creeping Death",
+        "tier": "7",
+        "cost": "3 Actions",
+        "type": "AoE",
+        "range": "8",
+        "damage": "4d20",
+        "effect": "If this kills the creature, it violently erupts, and you MUST deal the same amount of damage to another creature within 8 spaces of it that has not yet been damaged by this effect. Repeat until a creature survives this damage or no other creatures are within Reach.",
+        "upcast": "+1d20",
+        "description": "Yuck-splosion!"
+      },
+      {
+        "name": "Shadow Blast",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Single Target",
+        "range": "8",
+        "damage": "1d12+KEY",
+        "high_levels": "+1d12 every 5 levels",
+        "description": "One good reason to be afraid of the dark!"
+      },
+      {
+        "name": "Summon Shadow",
+        "tier": "Cantrip",
+        "cost": "1 Action",
+        "type": "Summon",
+        "range": "1",
+        "effect": "Summon a shadow minion within Reach 1 (you can summon a max of INT or LVL minions this way, whichever is lower). Your shadow minions follow the normal minion rules: they have 1 HP, no damage bonus, and do not crit. They abandon you immediately outside of combat.",
+        "abilities": [
+          {
+            "name": "Command",
+            "effect": "(1/turn) you may command ALL of your minions to move up to 6 then attack (Reach 1, d12 each)."
+          }
+        ],
+        "high_levels": "+1 Reach every 5 levels",
+        "description": "When he smiles like that, stay far away."
+      }
+    ],
+
     "utility": [
       {
         "name": "Ice Disk",
@@ -541,23 +789,6 @@
         ],
         "high_levels": "+1 Reach every 5 levels",
         "description": "When he smiles like that, stay far away."
-      }
-    ],
-    "potions": [
-      {
-        "name": "Healing Potion",
-        "action": "1 Action",
-        "effect": "Consume (or administer to an adjacent creature) to heal 2d4+4 HP."
-      },
-      {
-        "name": "Greater Healing Potion",
-        "action": "1 Action",
-        "effect": "Consume (or administer to an adjacent creature) to heal 3d6+6 HP."
-      },
-      {
-        "name": "Supreme Healing Potion",
-        "action": "1 Action",
-        "effect": "Consume (or administer to an adjacent creature) to heal 4d8+8 HP."
       }
     ]
   }
