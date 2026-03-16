@@ -501,7 +501,7 @@
       {
         "name": "Redeem",
         "tier": "9",
-        "cost": "24 hours",
+        "time": "24 hours",
         "type": "AoE",
         "range": "1 mile",
         "effect": "Revive any number of deceased creatures you choose—within 1 mile—that have died in the past year, provided they have not died of old age or been revived with this spell before.",

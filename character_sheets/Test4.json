@@ -58,6 +58,7 @@
     "equipment": [],
     "languages": [],
     "abilities": [],
-    "notes": ""
+    "notes": "",
+    "conditions": []
   }
 }

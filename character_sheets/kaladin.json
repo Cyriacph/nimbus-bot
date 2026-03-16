@@ -1,28 +1,28 @@
 {
   "character_sheet": {
     "basic_details": {
-      "character_name": "",
-      "ancestry": "",
-      "class": "",
+      "character_name": "Kaladin Stormblessed",
+      "ancestry": "Human",
+      "class": "Oathsworn",
       "level": 1,
-      "height": "",
-      "weight": "",
-      "hit_dice": ""
+      "height": "6'4\"",
+      "weight": "200 lbs",
+      "hit_dice": "1d10"
     },
     "stats": {
-      "strength": { "value": 0, "save": false },
+      "strength": { "value": 2, "save": false },
       "dexterity": { "value": 0, "save": false },
-      "intelligence": { "value": 0, "save": false },
-      "will": { "value": 0, "save": false }
+      "intelligence": { "value": -1, "save": false },
+      "will": { "value": 2, "save": false }
     },
     "hit_points": {
-      "current": 0,
-      "max": 0,
+      "current": 17,
+      "max": 17,
       "temp_hp": 0
     },
     "wounds": {
       "current": 0,
-      "max": 0
+      "max": 6
     },
     "armor": {
       "base": 0,
@@ -30,10 +30,10 @@
     },
     "initiative": {
       "base": 0,
-      "modifier": 0
+      "modifier": 1
     },
     "speed": {
-      "base": 0,
+      "base": 6,
       "modifier": 0
     },
     "inventory_slots": {
@@ -41,20 +41,21 @@
       "used": 0
     },
     "skills": {
-      "arcana": { "base": "intelligence", "bonus": 0 },
-      "examination": { "base": "intelligence", "bonus": 0 },
-      "finesse": { "base": "dexterity", "bonus": 0 },
-      "influence": { "base": "will", "bonus": 0 },
-      "insight": { "base": "will", "bonus": 0 },
-      "lore": { "base": "intelligence", "bonus": 0 },
-      "might": { "base": "strength", "bonus": 0 },
-      "naturecraft": { "base": "intelligence", "bonus": 0 },
-      "perception": { "base": "will", "bonus": 0 },
-      "stealth": { "base": "dexterity", "bonus": 0 }
+      "arcana": { "base": "intelligence", "bonus": 1 },
+      "examination": { "base": "intelligence", "bonus": 1 },
+      "finesse": { "base": "dexterity", "bonus": 1 },
+      "influence": { "base": "will", "bonus": 2 },
+      "insight": { "base": "will", "bonus": 2 },
+      "lore": { "base": "intelligence", "bonus": 1 },
+      "might": { "base": "strength", "bonus": 2 },
+      "naturecraft": { "base": "intelligence", "bonus": 1 },
+      "perception": { "base": "will", "bonus": 2 },
+      "stealth": { "base": "dexterity", "bonus": 1 }
     },
     "equipment": [],
     "languages": [],
     "abilities": [],
-    "notes": ""
+    "notes": "",
+    "conditions": []
   }
 }
