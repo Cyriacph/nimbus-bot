@@ -58,6 +58,20 @@ function characterSheetToPDF(characterName, callback) {
     doc.moveDown();
     doc.text('Languages: ' + sheet.languages.join(', '));
     doc.moveDown();
+
+    // Add Conditions section
+    const conditions = sheet.conditions || [];
+    const { CONDITIONS_DB } = require('../constants/conditions');
+    doc.fontSize(12).text('Conditions:', { underline: true });
+    if (conditions.length === 0) {
+        doc.text('  None');
+    } else {
+        conditions.forEach(cond => {
+            const desc = CONDITIONS_DB[cond] || '';
+            doc.text(`  ${cond.charAt(0).toUpperCase() + cond.slice(1)}${desc ? ': ' + desc : ''}`);
+        });
+    }
+    doc.moveDown();
     doc.text('Abilities:');
     sheet.abilities.forEach(ab => {
         doc.text(`  ${ab.name}: ${ab.description}`);
