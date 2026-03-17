@@ -90,5 +90,34 @@
     "abilities": [],
     "notes": "",
     "conditions": []
-  }
+  },
+  "spells": [
+    {},
+    {
+      "name": "Vicious Mockery",
+      "tier": "Cantrip",
+      "cost": "1 Action",
+      "type": "Single Target",
+      "range": "12",
+      "damage": "1d4+INT psychic (ignore physical armour",
+      "effect": "The is Taunted during their next turn.",
+      "high_levels": "+1 damage every 5 levels"
+    },
+    {
+      "name": "Redeem",
+      "tier": "9",
+      "cost": "A diamond worth at least 10,000 gp, which this spell consumes.",
+      "type": "AoE",
+      "range": "1 mile",
+      "duration": "24 hours",
+      "effect": "Revive any number of deceased creatures you choose—within 1 mile—that have died in the past year, provided they have not died of old age or been revived with this spell before.",
+      "description": "The power to undo death's hold is a heavy burden."
+    },
+    {
+      "name": "Light",
+      "tier": "Cantrip",
+      "cost": "1 Action",
+      "effect": "Cause an item to brightly glow as a torch with radiant light for as long as you hold it."
+    }
+  ]
 }

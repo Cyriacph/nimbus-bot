@@ -41,6 +41,15 @@ function startBot() {
     console.log(`Parsed command: '${command}', args: ${args}`);
 
     switch (command) {
+      case COMMANDS.ADD_SPELL: {
+        if (args.length < 2) {
+          message.reply(USAGE.ADD_SPELL);
+          return;
+        }
+        const addSpell = require("./commands/addSpell");
+        await addSpell.execute(message, args);
+        break;
+      }
       case COMMANDS.SEARCH_SPELL: {
         if (!args[0]) {
           message.reply(USAGE.SEARCH_SPELL);

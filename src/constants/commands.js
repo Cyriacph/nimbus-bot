@@ -18,7 +18,8 @@ const COMMANDS = {
   INITIATIVE: '!initiative',
   CONDITION: '!condition',
   ALLSPELLS: '!allspells',
-  SEARCH_SPELL: '!searchspell'
+  SEARCH_SPELL: '!searchspell',
+  ADD_SPELL: '!addspell'
 };
 
 const USAGE = {
@@ -37,6 +38,7 @@ const USAGE = {
   ALLSPELLS: 'Usage: !allspells',
   DAMAGE: 'Usage: !damage <characterName> <amount>',
   SEARCH_SPELL: 'Usage: !searchspell <spell name>',
+  ADD_SPELL: 'Usage: !addspell [characterName] [spellName]',
   HEAL: 'Usage: !heal <characterName> <amount>',
   WOUND: 'Usage: !wound <characterName> <amount>',
   INITIATIVE: 'Usage: !initiative <characterName>'
