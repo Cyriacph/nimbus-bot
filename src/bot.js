@@ -41,6 +41,15 @@ function startBot() {
     console.log(`Parsed command: '${command}', args: ${args}`);
 
     switch (command) {
+      case COMMANDS.SEARCH_SPELL: {
+        if (!args[0]) {
+          message.reply(USAGE.SEARCH_SPELL);
+          return;
+        }
+        const searchSpell = require("./commands/searchSpell");
+        await searchSpell.execute(message, args);
+        break;
+      }
       case COMMANDS.ADD: {
         if (!args[0]) {
           message.reply(USAGE.ADD);
@@ -134,8 +143,10 @@ function startBot() {
           if (result.modifier !== 0)
             reply += ` ${result.modifier > 0 ? "+" : "-"} ${Math.abs(result.modifier)}`;
           reply += `\nTotal: ${result.total}`;
-          if (result.isCritSuccess) reply += `\n${require('./constants/dice').CRIT_SUCCESS_MSG}`;
-          if (result.isCritFailure) reply += `\n${require('./constants/dice').CRIT_FAILURE_MSG}`;
+          if (result.isCritSuccess)
+            reply += `\n${require("./constants/dice").CRIT_SUCCESS_MSG}`;
+          if (result.isCritFailure)
+            reply += `\n${require("./constants/dice").CRIT_FAILURE_MSG}`;
           message.reply(reply);
         } catch (err) {
           if (err.name && err.message)
@@ -307,10 +318,13 @@ function startBot() {
         try {
           const newHP = damage(characterName, amount);
           if (newHP == -1) {
-            message.reply(`'${characterName}' is already in dying condition (0 HP), please use !wound instead.`);
-          }
-          else {
-            message.reply(`Damaged '${characterName}' by ${amount}. New HP: ${newHP}`);
+            message.reply(
+              `'${characterName}' is already in dying condition (0 HP), please use !wound instead.`,
+            );
+          } else {
+            message.reply(
+              `Damaged '${characterName}' by ${amount}. New HP: ${newHP}`,
+            );
           }
         } catch (err) {
           message.reply(`Error applying damage: ${err.message}`);
@@ -331,12 +345,14 @@ function startBot() {
         const { heal } = require("./commands/heal");
         try {
           const newHP = heal(characterName, amount);
-          message.reply(`Healed '${characterName}' by ${amount}. New HP: ${newHP}`);
+          message.reply(
+            `Healed '${characterName}' by ${amount}. New HP: ${newHP}`,
+          );
         } catch (err) {
           message.reply(`Error applying healing: ${err.message}`);
         }
       }
-      
+
       case COMMANDS.WOUND: {
         if (args.length < 2) {
           message.reply(USAGE.WOUND);
@@ -351,12 +367,17 @@ function startBot() {
         try {
           const newWounds = wound(characterName, amount);
           if (newWounds == -1) {
-            message.reply(`'${characterName}' is already at max wounds (6), cannot be wounded further.`);
-          }
-          else {
-            message.reply(`Inflicted ${amount} wounds to '${characterName}'. New wound count: ${newWounds}`);
+            message.reply(
+              `'${characterName}' is already at max wounds (6), cannot be wounded further.`,
+            );
+          } else {
+            message.reply(
+              `Inflicted ${amount} wounds to '${characterName}'. New wound count: ${newWounds}`,
+            );
             if (newWounds >= 6) {
-              message.reply(`'${characterName}' has suffered 6 wounds and is now dead.`);
+              message.reply(
+                `'${characterName}' has suffered 6 wounds and is now dead.`,
+              );
             }
           }
         } catch (err) {
@@ -370,23 +391,25 @@ function startBot() {
           return;
         }
         const characterName = args[0];
-        const { initiative } = require('./commands/initiative');
+        const { initiative } = require("./commands/initiative");
         try {
           const result = initiative(characterName);
           let reply = `Initiative for '${characterName}':\nRoll: ${result.initiativeRoll.rolls}\nTotal Initiative: ${result.initiativeRoll.total}
             \n${result.actions} action(s) to start with.`;
-          if (result.isCritSuccess) reply += `\n${require('./constants/dice').CRIT_SUCCESS_MSG}`;
-          if (result.isCritFailure) reply += `\n${require('./constants/dice').CRIT_FAILURE_MSG}`;
-          
+          if (result.isCritSuccess)
+            reply += `\n${require("./constants/dice").CRIT_SUCCESS_MSG}`;
+          if (result.isCritFailure)
+            reply += `\n${require("./constants/dice").CRIT_FAILURE_MSG}`;
+
           message.reply(reply);
-        } catch (err)  {
+        } catch (err) {
           message.reply(`Error rolling initiative: ${err.message}`);
         }
         break;
       }
 
       case COMMANDS.ALLSPELLS: {
-        const allspellsModule = require('./commands/allspells');
+        const allspellsModule = require("./commands/allspells");
         try {
           await allspellsModule.execute(message, args);
         } catch (err) {
@@ -404,7 +427,6 @@ function startBot() {
         // Optionally handle unknown commands
         break;
     }
-
   });
 
   client.login(process.env.DISCORD_TOKEN);

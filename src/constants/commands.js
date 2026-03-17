@@ -17,7 +17,8 @@ const COMMANDS = {
   UPSKILL: "Usage: !upskill <characterName> <skillName>",
   INITIATIVE: '!initiative',
   CONDITION: '!condition',
-  ALLSPELLS: '!allspells'
+  ALLSPELLS: '!allspells',
+  SEARCH_SPELL: '!searchspell'
 };
 
 const USAGE = {
@@ -35,6 +36,7 @@ const USAGE = {
   CONDITION: 'Usage: !condition <characterName> <condition_name>\nDescription: Toggle a condition for a character.',
   ALLSPELLS: 'Usage: !allspells',
   DAMAGE: 'Usage: !damage <characterName> <amount>',
+  SEARCH_SPELL: 'Usage: !searchspell <spell name>',
   HEAL: 'Usage: !heal <characterName> <amount>',
   WOUND: 'Usage: !wound <characterName> <amount>',
   INITIATIVE: 'Usage: !initiative <characterName>'
