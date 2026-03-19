@@ -23,6 +23,8 @@ function characterSheetToPDF(characterName, callback) {
 
     doc.fontSize(18).text(`Character Sheet: ${sheet.basic_details.character_name}`, { underline: true });
     doc.moveDown();
+
+    // ...existing code...
     doc.fontSize(12).text(`Ancestry: ${sheet.basic_details.ancestry}`);
     doc.text(`Class: ${sheet.basic_details.class}`);
     doc.text(`Level: ${sheet.basic_details.level}`);
@@ -59,16 +61,14 @@ function characterSheetToPDF(characterName, callback) {
     doc.text('Languages: ' + sheet.languages.join(', '));
     doc.moveDown();
 
-    // Add Conditions section
+    // Add Conditions section (only current, names only)
     const conditions = sheet.conditions || [];
-    const { CONDITIONS_DB } = require('../constants/conditions');
     doc.fontSize(12).text('Conditions:', { underline: true });
     if (conditions.length === 0) {
         doc.text('  None');
     } else {
         conditions.forEach(cond => {
-            const desc = CONDITIONS_DB[cond] || '';
-            doc.text(`  ${cond.charAt(0).toUpperCase() + cond.slice(1)}${desc ? ': ' + desc : ''}`);
+            doc.text(`  ${cond.charAt(0).toUpperCase() + cond.slice(1)}`);
         });
     }
     doc.moveDown();
@@ -79,6 +79,22 @@ function characterSheetToPDF(characterName, callback) {
     doc.moveDown();
     doc.text('Notes:');
     doc.text(sheet.notes);
+    doc.moveDown();
+
+    // Add Spells section (for quick reference) at the end
+    const spells = (sheet.spells && Array.isArray(sheet.spells)) ? sheet.spells : [];
+    doc.fontSize(12).text('Spells:', { underline: true });
+    if (spells.length === 0) {
+        doc.text('  None');
+    } else {
+        spells.forEach(spell => {
+            if (spell && spell.name) {
+                doc.text(`  ${spell.name}`);
+            }
+        });
+    }
+    doc.moveDown();
+
     doc.end();
     stream.on('finish', () => {
         callback(null, pdfPath);
