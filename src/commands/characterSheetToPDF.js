@@ -12,7 +12,8 @@ function characterSheetToPDF(characterName, callback) {
         callback(new Error(`No character sheet found for '${characterName}'.`));
         return;
     }
-    const sheet = JSON.parse(fs.readFileSync(jsonPath, 'utf8')).character_sheet;
+    const characterData = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
+    const sheet = characterData.character_sheet;
     if (!fs.existsSync(PDF_OUTPUT_DIR)) {
         fs.mkdirSync(PDF_OUTPUT_DIR);
     }
@@ -82,7 +83,12 @@ function characterSheetToPDF(characterName, callback) {
     doc.moveDown();
 
     // Add Spells section (for quick reference) at the end
-    const spells = (sheet.spells && Array.isArray(sheet.spells)) ? sheet.spells : [];
+    let spells = [];
+    if (sheet.spells && Array.isArray(sheet.spells) && sheet.spells.length > 0) {
+        spells = sheet.spells;
+    } else if (Array.isArray(characterData.spells) && characterData.spells.length > 0) {
+        spells = characterData.spells;
+    }
     doc.fontSize(12).text('Spells:', { underline: true });
     if (spells.length === 0) {
         doc.text('  None');
