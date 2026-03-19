@@ -20,7 +20,8 @@ const COMMANDS = {
   ALLSPELLS: '!allspells',
   SEARCH_SPELL: '!searchspell',
   ADD_SPELL: '!addspell',
-  MY_SPELLS: '!myspells'
+  MY_SPELLS: '!myspells',
+  REMOVE_SPELL: '!removespell'
 };
 
 const USAGE = {
@@ -43,7 +44,8 @@ const USAGE = {
   HEAL: 'Usage: !heal <characterName> <amount>',
   WOUND: 'Usage: !wound <characterName> <amount>',
   INITIATIVE: 'Usage: !initiative <characterName>',
-  MY_SPELLS: 'Usage: !myspells <characterName>'
+  MY_SPELLS: 'Usage: !myspells <characterName>',
+  REMOVE_SPELL: 'Usage: !removespell [characterName] [spellName]'
 };
 
 module.exports = {
