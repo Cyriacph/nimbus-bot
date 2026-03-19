@@ -435,6 +435,27 @@ function startBot() {
         break;
       }
 
+      case COMMANDS.MY_SPELLS: {
+        if (args.length < 1) {
+          message.reply(USAGE.MY_SPELLS);
+          return;
+        }
+        const characterName = args[0];
+        const { mySpells } = require("./commands/myspells");
+        try {
+          const spells = mySpells(characterName);
+          if (spells) {
+            message.reply(`Spells for '${characterName}':\n${spells}`);
+          }
+          else {
+            message.reply(`No spells found for '${characterName}'.`);
+          }
+        } catch (err) {
+          message.reply(`Error fetching spells: ${err.message}`);
+        }
+        break;
+      }
+
       default:
         // Optionally handle unknown commands
         break;

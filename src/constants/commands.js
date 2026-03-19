@@ -19,7 +19,8 @@ const COMMANDS = {
   CONDITION: '!condition',
   ALLSPELLS: '!allspells',
   SEARCH_SPELL: '!searchspell',
-  ADD_SPELL: '!addspell'
+  ADD_SPELL: '!addspell',
+  MY_SPELLS: '!myspells'
 };
 
 const USAGE = {
@@ -41,7 +42,8 @@ const USAGE = {
   ADD_SPELL: 'Usage: !addspell [characterName] [spellName]',
   HEAL: 'Usage: !heal <characterName> <amount>',
   WOUND: 'Usage: !wound <characterName> <amount>',
-  INITIATIVE: 'Usage: !initiative <characterName>'
+  INITIATIVE: 'Usage: !initiative <characterName>',
+  MY_SPELLS: 'Usage: !myspells <characterName>'
 };
 
 module.exports = {
