@@ -456,6 +456,16 @@ function startBot() {
         break;
       }
 
+      case COMMANDS.REMOVE_SPELL: {
+        if (args.length < 2) {
+          message.reply(USAGE.REMOVE_SPELL);
+          return;
+        }
+        const removeSpell = require("./commands/removeSpell");
+        await removeSpell.execute(message, args);
+        break;
+      }
+
       default:
         // Optionally handle unknown commands
         break;

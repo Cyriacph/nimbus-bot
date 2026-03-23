@@ -111,12 +111,6 @@
       "duration": "24 hours",
       "effect": "Revive any number of deceased creatures you choose—within 1 mile—that have died in the past year, provided they have not died of old age or been revived with this spell before.",
       "description": "The power to undo death's hold is a heavy burden."
-    },
-    {
-      "name": "Light",
-      "tier": "Cantrip",
-      "cost": "1 Action",
-      "effect": "Cause an item to brightly glow as a torch with radiant light for as long as you hold it."
     }
   ]
 }
