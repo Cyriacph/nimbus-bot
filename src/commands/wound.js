@@ -3,41 +3,46 @@
  * Usage: !wound <characterName> <amount>
  */
 
-const { fetchCharacterSheet} = require('./fetchSheet');
-const { storeCharacterSheet } = require('./storeSheet');
-const fs = require('fs');
+const { fetchCharacterSheet } = require("./fetchSheet");
+const { storeCharacterSheet } = require("./storeSheet");
+const fs = require("fs");
 
 // Returns current wound count after applying wounds, or -1 if character is already dead (6 wounds)
 function wound(characterName, amount) {
-    // fetchCharacterSheet returns the file path
-    const filePath = fetchCharacterSheet(characterName);
-    
-    // Read and parse the JSON file to get the actual sheet object
-    const sheetData = fs.readFileSync(filePath, 'utf8');
-    const sheetJSON = JSON.parse(sheetData);
-    const sheet = sheetJSON.character_sheet;
-    
-    const currentWounds = sheet.wounds.current;
-    const maxWounds = sheet.wounds.max;
-    if (currentWounds < maxWounds) {
-        let newWounds = currentWounds + amount;
-        if (newWounds > 6) {
-            newWounds = 6;
-            // Mark character as dead if wounds reach 6 and not already marked as dead and is dying
-            if (!sheet.conditions.includes('dead') && sheet.conditions.includes('dying')) {
-                sheet.conditions = sheet.conditions.filter(condition => condition !== 'dying');
-                sheet.conditions.push('dead');
-            }
-        }
-        sheet.wounds.current = newWounds;
+  // fetchCharacterSheet returns the file path
+  const filePath = fetchCharacterSheet(characterName);
 
-        storeCharacterSheet(characterName, sheetJSON);
+  // Read and parse the JSON file to get the actual sheet object
+  const sheetData = fs.readFileSync(filePath, "utf8");
+  const sheetJSON = JSON.parse(sheetData);
+  const sheet = sheetJSON.character_sheet;
 
-        return newWounds;
+  const currentWounds = sheet.wounds.current;
+  const maxWounds = sheet.wounds.max;
+  if (currentWounds < maxWounds) {
+    let newWounds = currentWounds + amount;
+    if (newWounds > 6) {
+      newWounds = 6;
+      // Mark character as dead if wounds reach 6 and not already marked as dead and is dying
+      if (
+        !sheet.conditions.includes("dead") &&
+        sheet.conditions.includes("dying")
+      ) {
+        sheet.conditions = sheet.conditions.filter(
+          (condition) => condition !== "dying",
+        );
+        sheet.conditions.push("dead");
+      }
     }
-    return -1; // Character is already at max wounds
+    sheet.wounds.current = newWounds;
+
+    storeCharacterSheet(characterName, sheetJSON);
+
+    return newWounds;
+  }
+  return -1; // Character is already at max wounds
 }
 
 module.exports = {
-    wound
-}
+  wound,
+};

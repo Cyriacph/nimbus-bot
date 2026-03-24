@@ -327,12 +327,17 @@ function startBot() {
         try {
           const newHP = damage(characterName, amount);
           if (newHP == -1) {
-            message.reply(`'${characterName}' is already in dying condition (0 HP), please use !wound instead.`);
-          }
-          else {
-            message.reply(`Damaged '${characterName}' by ${amount}. New HP: ${newHP}`);
+            message.reply(
+              `'${characterName}' is already in dying condition (0 HP), please use !wound instead.`,
+            );
+          } else {
+            message.reply(
+              `Damaged '${characterName}' by ${amount}. New HP: ${newHP}`,
+            );
             if (newHP === 0) {
-              message.reply(`'${characterName}' has reached 0 HP and is now in dying condition.`);
+              message.reply(
+                `'${characterName}' has reached 0 HP and is now in dying condition.`,
+              );
             }
           }
         } catch (err) {
@@ -355,9 +360,11 @@ function startBot() {
         try {
           const newHP = heal(characterName, amount);
           if (newHP == -1) {
-            message.reply(`'${characterName}' is dead and cannot be healed.`); 
+            message.reply(`'${characterName}' is dead and cannot be healed.`);
           } else {
-              message.reply(`Healed '${characterName}' by ${amount}. New HP: ${newHP}`);
+            message.reply(
+              `Healed '${characterName}' by ${amount}. New HP: ${newHP}`,
+            );
           }
         } catch (err) {
           message.reply(`Error applying healing: ${err.message}`);
@@ -446,8 +453,7 @@ function startBot() {
           const spells = mySpells(characterName);
           if (spells) {
             message.reply(`Spells for '${characterName}':\n${spells}`);
-          }
-          else {
+          } else {
             message.reply(`No spells found for '${characterName}'.`);
           }
         } catch (err) {

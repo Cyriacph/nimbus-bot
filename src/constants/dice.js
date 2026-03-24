@@ -11,5 +11,5 @@ module.exports = {
   MIN_DICE,
   MAX_DICE,
   CRIT_SUCCESS_MSG,
-  CRIT_FAILURE_MSG
+  CRIT_FAILURE_MSG,
 };

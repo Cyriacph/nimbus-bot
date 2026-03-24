@@ -1,3 +1,7 @@
+Thank you for considering contributing to nimbus-bot! We welcome bug reports, feature requests, and code contributions.
+
+**Note:** There are no automated tests for this project. Just make sure your changes work as intended on Discord. Manual testing is perfectly fine!
+
 
 # Contributing to nimbus-bot
 
@@ -11,7 +15,8 @@ Thank you for considering contributing to nimbus-bot! We welcome bug reports, fe
 3. **Get assigned** to an issue before starting work, to avoid duplicate efforts.
 4. **Fork the repository** and create your branch from `main`. Name your branch after the issue (e.g., `fix/typo-in-readme` or `feature/add-dice-command`).
 5. **Make focused commits** with clear messages.
-6. **Open a pull request** referencing the issue number (e.g., `Closes #12`). Describe what you changed and why.
+6. **Test your changes manually on Discord to make sure they work.**
+7. **Open a pull request** referencing the issue number (e.g., `Closes #12`). Describe what you changed and why.
 
 ## Issue and Pull Request Protocol
 
