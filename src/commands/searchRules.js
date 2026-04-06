@@ -1,4 +1,4 @@
-// pdfIndexer.js
+P// pdfIndexer.js
 // Loads and indexes PDFs for rule referral
 
 // This file should now use the PDF indexing/search logic from src/utils/pdfIndexer.js
