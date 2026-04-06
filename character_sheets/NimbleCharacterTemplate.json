@@ -10,10 +10,10 @@
       "hit_dice": ""
     },
     "stats": {
-      "strength": { "value": 0, "save": false },
-      "dexterity": { "value": 0, "save": false },
-      "intelligence": { "value": 0, "save": false },
-      "will": { "value": 0, "save": false }
+      "strength": { "value": 0, "save": "neutral" },
+      "dexterity": { "value": 0, "save": "neutral"},
+      "intelligence": { "value": 0, "save": "neutral"},
+      "will": { "value": 0, "save": "neutral"}
     },
     "hit_points": {
       "current": 0,

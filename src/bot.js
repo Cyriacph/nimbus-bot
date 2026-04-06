@@ -472,6 +472,48 @@ function startBot() {
         break;
       }
 
+      case COMMANDS.SET_STAT_ADV: {
+        if (args.length < 2) {
+          message.reply(USAGE.SET_STAT_ADV);
+          return;
+        }
+        const characterName = args[0];
+        const statName = args[1].toLowerCase();
+        const { setSave } = require("./commands/setSave");
+        try {
+          const updatedStats = setSave(characterName, statName, "advantage"); 
+          message.reply(
+            `Updated stat advantage for '${characterName}'. Current stats:\n${Object.entries(updatedStats)
+              .map(([stat, details]) => `- ${stat}: ${details.value} (${details.save})`)
+              .join("\n")}`,
+          )
+        } catch (err) {
+          message.reply(`Error updating stat advantage: ${err.message}`);
+        }
+        break;
+      }
+
+      case COMMANDS.SET_STAT_DIS: {
+        if (args.length < 2) {
+          message.reply(USAGE.SET_STAT_DIS);
+          return;
+        }
+        const characterName = args[0];
+        const statName = args[1].toLowerCase();
+        const { setSave } = require("./commands/setSave");
+        try {
+          const updatedStats = setSave(characterName, statName, "disadvantage");
+          message.reply(
+            `Updated stat disadvantage for '${characterName}'. Current stats:\n${Object.entries(updatedStats)
+              .map(([stat, details]) => `- ${stat}: ${details.value} (${details.save})`)
+              .join("\n")}`,
+          )
+        } catch (err) {
+          message.reply(`Error updating stat disadvantage: ${err.message}`);
+        }
+        break;
+      }
+
       default:
         // Optionally handle unknown commands
         break;
