@@ -1,0 +1,320 @@
+{
+	"dictionary": [
+		{
+			"word": "Berserker",
+			"definition": "Berserker: a frenzied melee damage dealer whose Rage grows stronger the longer a fight lasts. Key stats STR, DEX; hit die 1d12; starting HP 20; saves STR+, INT-; no armor; all STR weapons. Subclasses: Path of the Mountainheart, Path of the Red Mist."
+		},
+		{
+			"word": "Rage",
+			"definition": "Berserker feature (Action, 1/turn): roll a Fury Die and set it aside; it adds to every STR attack. You can hold up to KEY Fury Dice. Rage ends if you leave combat, drop to 0 HP, or go a round without attacking or Raging. From L5 each Rage gives 2 dice; from L18 dropping to 0 HP no longer ends it."
+		},
+		{
+			"word": "Fury Dice",
+			"definition": "Berserker dice gained by Raging and added to STR attacks. When attacked, spend any to reduce damage by STR+DEX per die. Intensifying Fury grows them from d4 to d6 (L6), d8 (L9), d10 (L13), d12 (L17), and from L2 you roll 1 free if Raging at the start of your turn."
+		},
+		{
+			"word": "Savage Arsenal",
+			"definition": "Berserker ability list: pick 1 at L4 and another at L6, 8, 10, 12, 14, 16 (7 total). Options: Death Blow, Deathless Rage, Eager for Battle, Into the Fray, Mighty Endurance, MORE BLOOD!, Rampage, Swift Fury, Thunderous Steps, Unstoppable Force, Whirlwind, You're Next!"
+		},
+		{
+			"word": "Path of the Mountainheart",
+			"definition": "Berserker subclass. An unbreakable, stone-tough fighter: spent Fury Dice block extra damage, Hit Dice healing can remove Wounds, Unbreakable ignores a last Wound or condition 1/encounter while Raging, misses or enemy crits trigger a free Rage, and crits against you while Dying are rerolled."
+		},
+		{
+			"word": "Path of the Red Mist",
+			"definition": "Berserker subclass. A bloodthirsty hunter: crits or kills while Raging max out a Fury Die (1/turn), advantage to track blood and Blindsight 2 while Raging, take a Wound to reroll an attack or save, better opportunity attacks, and at L15 +2 speed plus a free move each round."
+		},
+		{
+			"word": "The Cheat",
+			"definition": "The Cheat: a sneaky rogue who bends dice results, backstabs Distracted foes, and slips away. Key stats DEX, INT; hit die 1d6; starting HP 10; saves DEX+, WIL-; leather armor; DEX weapons. Subclasses: Tools of the Silent Blade, Tools of the Scoundrel."
+		},
+		{
+			"word": "Sneak Attack",
+			"definition": "Cheat feature (1/turn): when you crit, deal extra damage, starting at +1d6 and rising to 1d8 (L3), 2d8 (L7), 2d10 (L9), 2d12 (L11), 2d20 (L15), 3d20 (L17). Twist the Blade (L5) lets you set one Sneak Attack die to any value as an action, free 1/turn from L13."
+		},
+		{
+			"word": "Vicious Opportunist",
+			"definition": "Cheat feature (1/turn): when you hit a Distracted target in melee, set the Primary Die to any value; max counts as a crit. A target is Distracted if adjacent to or Taunted by an ally, or if it can't see you. At L20 (Supreme Execution) blade attacks no longer need a Distracted target."
+		},
+		{
+			"word": "Cheat (ability)",
+			"definition": "The Cheat's L2 feature: 1/round Move or Hide for free; 1/day turn any skill check into 10+INT; raise an Initiative roll under 10 to 10; and advantage on skill checks in games, contests, or wagers (if you aren't caught). Its tricks may or may not be magic; no explanation needed."
+		},
+		{
+			"word": "Underhanded Ability",
+			"definition": "Cheat ability list: pick 1 at L4, then more at L6, 8, 10, 12, 14, 16, 18 (8 total). Options: Creative Accounting, Exploit Weakness, Feinting Attack, How'd YOU get here?!, I'm Outta Here!, Misdirection, Steal Tempo, Sunder Armor (Medium, then Heavy), Trickshot."
+		},
+		{
+			"word": "Tools of the Silent Blade",
+			"definition": "Cheat subclass. A stealthy assassin: killing a target with Sneak Attack can turn you Invisible, Stealth advantage at full health (later always, plus a climb speed), Cunning Strike forces a STR save or Sneak Attack deals max damage, and at L15 a crit kills any enemy with lower max HP than you."
+		},
+		{
+			"word": "Tools of the Scoundrel",
+			"definition": "Cheat subclass. A dirty fighter and smooth talker: Low Blow spends 2 extra actions on a Sneak Attack to Incapacitate (STR save) and Taunt, Sweet Talk aids first meetings, Pocket Sand blinds melee attackers, Escape Plan dodges 0 HP by going Invisible, and at L15 a round of attacks can't miss."
+		},
+		{
+			"word": "Commander",
+			"definition": "Commander: a battlefield tactician and master of all weapons who directs allies with orders. Key stats STR, INT; hit die 1d10; starting HP 17; saves STR+, DEX-; mail armor and shields; all martial weapons. Subclasses: Champion of the Bulwark, Champion of the Vanguard."
+		},
+		{
+			"word": "Coordinated Strike!",
+			"definition": "Commander's Order gained at L1: 1/round as a free action, you and an ally within 6 spaces each make a weapon attack or cast a cantrip for free, INT times per Safe Rest. Master Commander (L5) regains a use on Initiative and ignores disadvantage; +1 use at L9, 13, 17."
+		},
+		{
+			"word": "Commander's Orders",
+			"definition": "Commander options; choose 2 at L2 (Coordinated Strike! comes free at L1). Others: Face Me! (Taunt an enemy that crits an ally), Hold the Line! (set a downed ally to 3x LVL HP), I Can Do This ALL DAY! (Hit Dice instead of 0 HP), Move it! Move it!, Reposition! (move allies)."
+		},
+		{
+			"word": "Combat Dice",
+			"definition": "Commander resource from L4 (Fit for Any Battlefield): on Initiative gain STR Combat Dice (d6), lost when combat ends; 1/attack spend one on a Combat Tactic. They grow to d8 (L5), d10 (L9), d12 (L13), d20 (L17). Later levels add a tactic or +1 max die."
+		},
+		{
+			"word": "Combat Tactics",
+			"definition": "Commander maneuvers fueled by Combat Dice: Commanding Presence (2-word order, WIL save), Heavy Strike (push plus bonus damage), Inerrant Strike (reroll a miss, +1 Primary Die), Lunging Strike (+1 Reach, 2x die damage), Sweeping Strike (2 actions, hit all in reach)."
+		},
+		{
+			"word": "Weapon Mastery (Commander)",
+			"definition": "Commander feature from L6: swap weapons 2x/round for free and specialize in a weapon type, a 2nd at L10, all at L14. Slashing: can't miss unarmored foes. Piercing: ignore Medium Armor. Bludgeoning: ignore Heavy Armor when the Primary Die rolls 7+."
+		},
+		{
+			"word": "Champion of the Bulwark",
+			"definition": "Commander subclass. A heavily armored shield fighter: plate armor proficiency, Defend 2x per round with a shield and a free opportunity attack after a full block, Coordinated Strike adds your armor to damage, Taunt creatures you hit, and at L15 allies within 2 spaces share your shield."
+		},
+		{
+			"word": "Champion of the Vanguard",
+			"definition": "Commander subclass. A leader of the charge: advantage after advancing on a foe, allies within 12 spaces move before your Coordinated Strike, which gains an extra ally target and more uses, +1 max Combat Dice, and at L15 it grants advantage and an extra action to your allies."
+		},
+		{
+			"word": "Hunter",
+			"definition": "A wilderness tracker who marks prey and fights it at range or up close. Key stats DEX, WIL; hit die 1d8; starting HP 13; saves DEX+, INT-; leather armor; DEX weapons. Subclasses: Keeper of the Shadowpath, Keeper of the Wild Heart."
+		},
+		{
+			"word": "Hunter's Mark",
+			"definition": "Hunter, level 1. Action: mark a visible creature as your quarry for 1 day or until you mark another. It can't hide from you, and before each attack on it you pick advantage or +LVL damage. At level 20 (Nemesis) you can mark any number of creatures at once."
+		},
+		{
+			"word": "Thrill of the Hunt",
+			"definition": "Hunter, level 2. Pick 2 TotH abilities (more at levels 4, 6, 8, 12, 14). Gain a charge when your quarry dies, or you hit it in melee or crit it at range. Abilities cost 1 charge, can't miss, can't generate charges, and unused charges vanish after combat."
+		},
+		{
+			"word": "Final Takedown",
+			"definition": "Hunter, level 5. Action: spend 1 Thrill of the Hunt charge for a melee attack on your Bloodied quarry; it becomes a crit and your Hunter's Mark damage is doubled. If the target survives, it crits you in return."
+		},
+		{
+			"word": "Keeper of the Shadowpath",
+			"definition": "Hunter subclass. A stealthy ambusher and tracker: free Hunter's Mark and advantage on your first attack when combat starts, can't get lost naturally, a 1/encounter turn of attacks ignoring cover and armor, and later marking a second nearby creature for free."
+		},
+		{
+			"word": "Keeper of the Wild Heart",
+			"definition": "Hunter subclass. A hardy survivalist: +5 max HP and d10 hit dice, free movement when combat starts or you gain charges, crafting Healing Salves (heal WIL d6) on rests, dodging a would-be lethal hit 1/Safe Rest, and later +WIL armor."
+		},
+		{
+			"word": "Mage",
+			"definition": "A scholar who studies and commands the elements of fire, ice and lightning. Key stats INT, WIL; hit die 1d6; starting HP 10; saves INT+, STR-; cloth armor; blades, staves, wands. Subclasses: Invoker of Control, Invoker of Chaos."
+		},
+		{
+			"word": "Mana (Mage)",
+			"definition": "Mage, level 2. Unlocks tier 1 Fire, Ice and Lightning spells (cantrips known from level 1) and a mana pool with max (INT x 3) + LVL, refilled on a Safe Rest. New spell tiers unlock at levels 4, 6, 8, 10, 12, 14, 16 and 18, up to tier 9."
+		},
+		{
+			"word": "Spellshaper",
+			"definition": "Mage, level 4. Spend extra mana to modify spells, max 1 per turn. Pick 2 options, more at levels 9 and 13. Examples: Stretch Time (-1 action), Echo Casting (copy onto a 2nd target), Dimensional Compression (+range), Elemental Transmutation (change damage type)."
+		},
+		{
+			"word": "Elemental Surge",
+			"definition": "Mage, level 5. When you roll Initiative, regain WIL mana, which is lost at the end of combat if unused. Improves to WIL+1d4 at level 10 and WIL+2d4 at level 17."
+		},
+		{
+			"word": "Invoker of Control",
+			"definition": "Mage subclass. Forces magic to obey: once a round you can Demand Control, picking an unused Control Table effect (free sure-hit cantrip, inflict a condition, or stop a creature harming someone). You must do so when a spell misses or is saved against. Later gains Necrotic spells."
+		},
+		{
+			"word": "Invoker of Chaos",
+			"definition": "Mage subclass. Embraces wild magic: you may pay 1 less mana for a spell, and doing so or critting makes you roll on the GM's secret Chaos Table (1 is very bad, 20 is great). Later gains Wind spells, a push-back reaction, and ways to roll twice or with advantage."
+		},
+		{
+			"word": "Oathsworn",
+			"definition": "A holy warrior sworn to protect allies and punish evil with radiant power. Key stats STR, WIL; hit die 1d10; starting HP 17; saves STR+, DEX-; all armor; STR weapons. Subclasses: Oath of Vengeance, Oath of Refuge."
+		},
+		{
+			"word": "Radiant Judgment",
+			"definition": "Oathsworn, level 1. When an enemy attacks you and you have no Judgment Dice, roll them (2d6); your next melee hit adds that much radiant damage, and the dice are spent hit or miss. Dice grow to d8 (lvl 3), d10 (5), d12 (8), d20 (10), and +1 die at 14."
+		},
+		{
+			"word": "Lay on Hands",
+			"definition": "Oathsworn, level 1. A healing pool of 5 x LVL points, refilled on a Safe Rest. Action: touch a target and spend any amount of the pool to heal that many HP."
+		},
+		{
+			"word": "Zealot",
+			"definition": "Oathsworn, level 2. When making a melee attack, spend mana (up to your highest spell tier); per mana pick Condemning Strike (+5 radiant damage) or Blessed Aim (target's armor 1 step lower this attack). Oathsworn mana pool is WIL + LVL."
+		},
+		{
+			"word": "Sacred Decree",
+			"definition": "Oathsworn, level 3, with more at 6, 9, 12, 14 and 16. Mostly aura-based boons, e.g. Courage! (ally at 0 HP stays at 1), Explosive Judgment (Judgment Dice hit all enemies in aura), Improved Aura (+2 reach), Reliable Justice (advantage on Judgment Dice)."
+		},
+		{
+			"word": "Oath of Vengeance",
+			"definition": "Oathsworn subclass. Offensive oath: roll 1 extra Judgment Die, gain a Reach 4 aura, and Judgment also triggers when allies in it are attacked. Wounds set Judgment Dice to max; later boosts melee dice while holding Judgment Dice and maxes a die whenever you're attacked."
+		},
+		{
+			"word": "Oath of Refuge",
+			"definition": "Oathsworn subclass. Protective oath: shields gain +WIL armor and work as a focus, and a Reach 4 aura lets you Interpose for allies anywhere in it. Interposing Taunts the attacker; later allies in your aura take a Wound instead of dropping below 1 HP, and you resist all damage while Interposing."
+		},
+		{
+			"word": "Shadowmancer",
+			"definition": "A caster who bargains with an ancient Patron for stolen dark power and fights with swarms of shadow minions. Key Stats INT, DEX. Hit Die 1d8, 13 starting HP. Saves INT+, WIL-. Cloth armor; blades and wands. Subclasses: Pact of the Red Dragon, Pact of the Abyssal Depths."
+		},
+		{
+			"word": "Shadow Blast",
+			"definition": "Shadowmancer necrotic cantrip known from level 1. Once per turn, an action to attack at Range 8 for 1d12+KEY damage, gaining +1d12 every 5 levels. Several Greater Shadow Invocations modify it (push, longer range, reaction casts)."
+		},
+		{
+			"word": "Summon Shadows",
+			"definition": "Shadowmancer necrotic cantrip. Action: summon a shadow minion within Reach 1, up to INT or LVL minions (whichever is lower). Action (1/turn): all minions move 6 and attack for 1d12 each at Reach 1. Reach grows +1 every 5 levels."
+		},
+		{
+			"word": "Shadow Minions",
+			"definition": "Shadowmancer summons. Normal minion rules: 1 HP, no damage bonus, cannot crit, and they leave once combat ends. They count as separate creatures, so you can attack and command them in the same turn without the Rushed Attack penalty. At 17 attacks on them have disadvantage."
+		},
+		{
+			"word": "Pilfered Power",
+			"definition": "Shadowmancer feature (level 2). Tiered spells are cast by stealing from your Patron, always at your highest unlocked tier. Allowed DEX times; each use past that costs half your max HP. Resets when you commune with your Patron on a Safe Rest. Greedy Pact (12) adds a STR save to reduce the cost."
+		},
+		{
+			"word": "Shadow Invocations",
+			"definition": "Shadowmancer options. Lesser Invocations (levels 3, 8, 11) are mostly utility, like talking to aberrations or rerolls. Greater Invocations (A Gift from the Master: 4, 6, 9, 14, 18) boost combat, e.g. damage reduction per minion or minion Reach. Supplicate lets you swap choices on a Safe Rest."
+		},
+		{
+			"word": "Pact of the Red Dragon",
+			"definition": "Shadowmancer subclass. Fire-themed pact: gain Fire spells, minions become flaming wyrmling shadows, and crits inflict Smoldering. Later you can cast Pyroclasm free by catching yourself in it, regain Pilfered Power on Initiative, and take 1d4 Wounds to cast Dragonform."
+		},
+		{
+			"word": "Pact of the Abyssal Depths",
+			"definition": "Shadowmancer subclass. Ice-themed pact: gain Ice spells and water breathing, and crits give you INT+LVL temp HP. Shadow Blast later Slows, temp HP can fuel Cryosleep or Rimeblades, a reaction grants big temp HP and clears conditions, and at 15 you pay half max HP to cast any Ice spell."
+		},
+		{
+			"word": "Shepherd",
+			"definition": "A holy healer balancing life and death, aided by a spirit companion. Key Stats WIL, STR. Hit Die 1d10, 17 starting HP. Saves WIL+, DEX-. Mail armor and shields; STR weapons and wands. Knows Radiant and Necrotic magic; mana = (WIL x 3) + LVL. Subclasses: Luminary of Mercy, Luminary of Malice."
+		},
+		{
+			"word": "Searing Light",
+			"definition": "Shepherd level 1 feature, usable WIL times per Safe Rest. Action at Reach 6: either heal a Dying creature for WIL d8 HP, or deal WIL d8 radiant damage to an undead or Bloodied enemy."
+		},
+		{
+			"word": "Lifebinding Spirit",
+			"definition": "Shepherd tier 1 Radiant spell. Summons an invulnerable spirit companion; an action has it attack (1d6+WIL radiant, ignoring armor) or heal the same amount within Reach 4. Ends on recast, Safe Rest, or after healing as many times as mana spent. Upcasting raises its die (max d12) and adds a heal."
+		},
+		{
+			"word": "Sacred Graces",
+			"definition": "Shepherd options chosen at levels 5 (two), 9, and 13. Most boost the Lifebinding Spirit (extra Reach, bigger dice, adding its damage to your melee) or healing, e.g. reviving the recently dead or regaining Searing Light on Initiative. Serve lets you swap choices on a Safe Rest."
+		},
+		{
+			"word": "Luminary of Mercy",
+			"definition": "Shepherd subclass. Focused on healing: healing a Dying creature is doubled, and your spirit can act while you are Dying. Later, healing can spread to a second target via Searing Light, you can maximize healing rolls or give temp HP instead, and that extra target count grows."
+		},
+		{
+			"word": "Luminary of Malice",
+			"definition": "Shepherd subclass. Death-themed: harmful Searing Light also hits a 2nd enemy, and your spirit can turn deathly and deal necrotic. A once-per-rest reaction leaves you at 1 HP instead of 0 and can Bloody or drop a foe; first melee hit on a Bloodied target each round auto-crits."
+		},
+		{
+			"word": "Songweaver",
+			"definition": "A muse-touched performer who inspires allies, mocks foes, and summons friends via song. Key Stats WIL, INT. Hit Die 1d8, 13 starting HP. Saves WIL+, STR-. Cloth and leather armor; DEX weapons and wands. Knows Wind plus one other school; mana = (INT x 3) + LVL. Subclasses: Herald of Snark, Herald of Courage."
+		},
+		{
+			"word": "Vicious Mockery",
+			"definition": "Songweaver Wind cantrip. Action at Range 12: 1d4+INT psychic damage ignoring armor, and the target is Taunted on its next turn. +2 damage every 5 levels. Herald of Snark builds on it heavily."
+		},
+		{
+			"word": "Songweaver's Inspiration",
+			"definition": "Songweaver feature, 2 x WIL uses per Safe Rest. Free reaction: let an ally reroll one die on an attack or save, keeping either result. Quick Wit (level 3) restores 2 uses on Initiative; at level 20 the target automatically succeeds."
+		},
+		{
+			"word": "Lyrical Weaponry",
+			"definition": "Songweaver options chosen at levels 4, 9, 13, and 17. Examples: Heroic Ballad (more Inspiration, +WIL damage), mass revive Dying allies with 1 HP, redirect an attack aimed at you, strip a foe's special abilities, or a WIL-save song that shoves and roots enemies."
+		},
+		{
+			"word": "A \"People\" Person",
+			"definition": "Songweaver feature: pick 2 friends you can summon by song, each 1/Safe Rest. Options: Stompy the hill giant (rampaging damage), Mal the imp (shady info and favors), Gran Gran (pastries restoring mana, Hit Dice, or Wounds), Linos (a flying mount for the party). Can be reflavored with the GM."
+		},
+		{
+			"word": "Herald of Snark",
+			"definition": "Songweaver subclass built around Vicious Mockery: reaction-cast it for double damage when an enemy misses, let an ally Taunt a mocked foe, once per encounter shift all creatures who hear you 3 spaces, and at 15 Mockery deals 1d6+INT+WIL."
+		},
+		{
+			"word": "Herald of Courage",
+			"definition": "Songweaver subclass that amplifies Songweaver's Inspiration: it grants nearby allies WIL temp HP, later lets the target reroll with advantage and gain an extra action, and at 15 a once-per-encounter reaction gives the whole party 1 action."
+		},
+		{
+			"word": "Stormshifter",
+			"definition": "Nature caster who wields lightning and wind and shapeshifts into beasts to fill whatever role the party needs. Key Stats WIL, DEX; Hit Die 1d8; Starting HP 13; Saves WIL+, STR-; Armor cloth or leather; Weapons staves, wands. Subclasses: Circle of Sky & Storm, Circle of Fang & Claw."
+		},
+		{
+			"word": "Beastshift",
+			"definition": "Stormshifter, level 1. As an action, become a harmless beast and speak with animals; the form ends at 0 HP, when you cast a spell, or freely on your turn. DEX charges per Safe Rest, more via Expert Shifter. Tiny forms impose disadvantage on attacks against you, but any damage ends them."
+		},
+		{
+			"word": "Direbeast Form",
+			"definition": "Stormshifter combat shapes for Beastshift: Fearsome Beast (Large, lvl 2: temp HP, Gore, force rerolls when you Interpose/Defend), Beast of the Pack (Medium, lvl 3: speed, Thunderfang that grows on crits/kills, mana Supercharge), Beast of Nightmares (Tiny, lvl 5: acid Sting, untargetable until noticed)."
+		},
+		{
+			"word": "Chimeric Boons",
+			"definition": "Stormshifter options; when you shift into a Direbeast form you may add 1 boon you know. Start with 2, gain more at levels 9, 12, 17. Choices: Beast of the Sea, Climber, Fleet Footed, Earthwalker, Keen Senses, Leader of the Pack, Phasebeast, Prehensile Tail, Winged."
+		},
+		{
+			"word": "Circle of Sky & Storm",
+			"definition": "Stormshifter subclass focused on spellcasting. Learn the Ice or Radiant school, cast while Beastshifted, add LVL to a nature/weather check 1/day. Later: free cantrip when you crit with a tiered spell, bonus effects for spending 2+ mana, and concentrating on a lightning and a wind spell at once."
+		},
+		{
+			"word": "Circle of Fang & Claw",
+			"definition": "Stormshifter subclass focused on shapeshifting. Beastshift or move free on Initiative, swap Direbeast forms freely, beasts won't attack you, and an emergency Fearsome Beast shift to guard allies. Later: turn a miss into a crit, a teleporting lightning dash, Venomous Gaze, and more Chimeric Boons per form."
+		},
+		{
+			"word": "Zephyr",
+			"definition": "Unarmored martial artist who uses speed as both weapon and shield, hitting hard and slipping past attacks. Key Stats DEX, STR; Hit Die 1d8; Starting HP 13; Saves DEX+, INT-; Armor none; Weapons melee. Subclasses: Way of Pain, Way of Flame."
+		},
+		{
+			"word": "Iron Defense",
+			"definition": "Zephyr, level 1. While unarmored, your armor equals DEX+STR, and at level 13 it is doubled. Comes with Swift Fists: unarmed strikes deal 1d4+STR and are not hit by the Rushed Attack disadvantage."
+		},
+		{
+			"word": "Burst of Speed",
+			"definition": "Zephyr, level 2. On Initiative gain DEX Bursts for the encounter; once per turn spend 1 for a free maneuver: Slipstream (Defend, attack misses), Whirling Defense (armor vs every attack this round), Swiftstrike (attack, no Rushed disadvantage), Windstep (move ignoring difficult terrain)."
+		},
+		{
+			"word": "Martial Arts Abilities",
+			"definition": "Zephyr options chosen through Martial Master: one at level 4, then another at 6, 8, 10, 12, 14, 16, 18. Includes Airshift, Blur, Bodily Discipline, Enduring Soul, I Jump On His Back!, Kinetic Barrage, Mighty Soul, Quickstrike, Use Momentum, Vital Rejuvenation, Windstrider."
+		},
+		{
+			"word": "Unyielding Resolve",
+			"definition": "Zephyr, level 4. Ignore the first Wound you would suffer each encounter (on-Wound effects like Kinetic Momentum still trigger). Rises to 2 Wounds at level 10 and 3 at level 17, which also grants advantage on STR saves while Dying."
+		},
+		{
+			"word": "Way of Pain",
+			"definition": "Zephyr subclass that punishes attackers. Once per round turn a melee attack on you into a crit; crits on you are halved and the attacker takes the same damage (doubled if you take a Wound). Later Swiftstrike hits extra targets, and while Bloodied you gain advantage on your first attack each turn and all saves."
+		},
+		{
+			"word": "Way of Flame",
+			"definition": "Zephyr subclass that burns through its own Wounds. Gaining a Wound deals STR+Wounds damage to chosen creatures within 2 spaces and makes them Smoldering. Later Windstep scorches enemies you pass, crits set off chaining fire damage, and at level 15 your fire damage is doubled."
+		},
+		{
+			"word": "Story-Based Subclasses (Extra Subclasses)",
+			"definition": "Called story-based subclasses in the book: alternate subclasses for dramatic story turns. Usually not suited to level 1; at the GM's discretion you may take one at any point the story demands, replacing your current subclass. More complex and meant for experienced players, but not stronger."
+		},
+		{
+			"word": "Oathbreaker",
+			"definition": "Extra Oathsworn subclass for a fallen hero seeking redemption. Trades some Radiant spells for Necrotic ones and gains a Reach 4 aura to Interpose for allies; Radiant Judgment now triggers when you could Interpose but don't. Later: take allies' Wounds and failed saves, swap HP with a dying ally, turn Lay on Hands into damage."
+		},
+		{
+			"word": "Spellblade",
+			"definition": "Extra Commander subclass blending steel and spell. Lose Weapon Mastery and Combat Tactics; gain INT mana on Initiative, take extra Orders or tier 1 spells in their place, and each Commander's Order gets a magical upgrade. Free Enchant Weapon on Initiative, plus Deep Knowledge spells at levels 3, 7, 11, 15."
+		},
+		{
+			"word": "Reaver",
+			"definition": "Extra Shadowmancer subclass cut off from its patron. Lose Shadow Blast and tiered casting via Pilfered Power; instead summon a Bonescythe (Reach 2, 2d12 slashing+DEX necrotic per die, +1 die every 5 levels) that shatters on a hit. Later spend shadow minions or Wounds to cast spells."
+		},
+		{
+			"word": "Beastmaster",
+			"definition": "Extra Hunter subclass with an animal companion (Small; Medium or Large from level 3) whose HP and movement are abstracted. Your first 2 Thrill of the Hunt picks can be Go for the Throat! and Protect Me!, which vary by companion size, along with Keen Eyes, Ferocious, or Alpha Protector."
+		}
+	]
+}
