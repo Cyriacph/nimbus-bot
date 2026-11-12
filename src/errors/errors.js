@@ -12,7 +12,31 @@ const ERROR_MESSAGES = {
   DICE_RANGE: 'Number of dice must be between {min} and {max}.'
 };
 
+class DiceNotationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = ERROR_NAMES.DICE_NOTATION;
+  }
+}
+
+class InvalidDieError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = ERROR_NAMES.INVALID_DIE;
+  }
+}
+
+class DiceRangeError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = ERROR_NAMES.DICE_RANGE;
+  }
+}
+
 module.exports = {
   ERROR_NAMES,
-  ERROR_MESSAGES
+  ERROR_MESSAGES,
+  DiceNotationError,
+  InvalidDieError,
+  DiceRangeError
 };
