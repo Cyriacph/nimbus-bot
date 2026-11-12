@@ -1,8 +1,8 @@
 // dice.test.js
 // Automated tests for dice.js and error handling
 
-const dice = require('../src/dice_command/dice');
-const { DiceNotationError, InvalidDieError, DiceRangeError } = require('../src/dice_command/dice_errors');
+const dice = require('../src/commands/rollDice');
+const { DiceNotationError, InvalidDieError, DiceRangeError } = require('../src/errors/errors');
 
 describe('Dice Module', () => {
     test('Valid dice roll: 2d6', () => {

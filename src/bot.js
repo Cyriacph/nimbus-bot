@@ -70,7 +70,7 @@ function startBot() {
           return;
         }
         const attachment = message.attachments.first();
-        const fetch = require("node-fetch");
+        // fetch is built into Node.js 18+, so no extra package is needed
         fetch(attachment.url)
           .then((res) => res.text())
           .then((data) => {
