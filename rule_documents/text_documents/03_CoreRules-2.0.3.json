@@ -1,56 +1,976 @@
 {
 	"dictionary": [
-		{ "word": "Stats", "definition": "Stats are the six core abilities of your hero: Strength (physical power), Dexterity (agility), Constitution (endurance), Intelligence (reasoning), Wisdom (perception), and Charisma (influence). Stats affect skill checks, combat, and saves." },
-		{ "word": "Skills", "definition": "Skills are specialized abilities your hero uses to perform tasks. Examples include Athletics, Stealth, Persuasion, and Arcana. Skill checks use a d20 plus relevant modifiers." },
-		{ "word": "Skill Check", "definition": "A roll to determine success in a task. Roll a d20, add skill and stat modifiers, and compare to the GM’s difficulty. Used for actions like climbing, sneaking, or persuading." },
-		{ "word": "Saving Throw", "definition": "A roll to resist harmful effects (like poison or spells). Roll a d20, add relevant stat modifier, and compare to the effect’s difficulty." },
-		{ "word": "Hit Points", "definition": "Hit Points (HP) measure your hero’s health. When reduced to zero, your hero is dying and must make saves to avoid death. Healing restores HP." },
-		{ "word": "Speed", "definition": "Speed is how far your hero can move on their turn, usually measured in feet or squares. Movement can be split before and after actions." },
-		{ "word": "Range", "definition": "Range is the maximum distance for attacks, spells, or abilities. Ranged weapons and spells list their range in feet or squares." },
-		{ "word": "Heroic Action", "definition": "A major action taken on your turn in combat, such as attacking, casting a spell, helping an ally, or using an item. Each turn, you can take one Heroic Action." },
-		{ "word": "Heroic Reaction", "definition": "A special response to threats during combat, like dodging an attack, countering a spell, or protecting a friend. Reactions are limited and often require specific triggers." },
-		{ "word": "Character Creation", "definition": "The process of building your hero: choose a class, ancestry, background, assign stats, select skills, and equip items. Fill out your character sheet as you go." },
-		{ "word": "Equipment", "definition": "Items your hero carries, including armor, weapons, tools, and magical items. Equipment affects combat, defense, and abilities." },
-		{ "word": "Armor", "definition": "Protective gear that reduces damage taken. Types include light, medium, and heavy armor, each with different defense bonuses and movement penalties." },
-		{ "word": "Melee Weapon", "definition": "Weapons used in close combat, such as swords, axes, and maces. Melee attacks use Strength or Dexterity modifiers." },
-		{ "word": "Ranged Weapon", "definition": "Weapons used to attack from a distance, like bows, crossbows, and slings. Ranged attacks use Dexterity modifiers and have a listed range." },
-		{ "word": "Magical Item", "definition": "Special items with magical properties, such as enchanted weapons, armor, potions, or artifacts. Magical items grant bonuses or abilities." },
-		{ "word": "Spell", "definition": "Magical abilities heroes can cast. Spells are divided into types: Fire, Ice, Lightning, Wind, Radiant, Necrotic, and Utility. Each spell has effects, range, and requirements." },
-		{ "word": "Spell Scroll", "definition": "A scroll containing a spell that can be cast once. After use, the scroll is consumed." },
-		{ "word": "Wand", "definition": "A magical item used to cast spells. Wands may have charges or limited uses." },
-		{ "word": "Rest", "definition": "A period of downtime where heroes recover hit points, abilities, and spells. Short rests restore some resources; long rests restore most." },
-		{ "word": "Downtime", "definition": "Time spent between adventures for training, crafting, socializing, or pursuing personal goals. Downtime activities can grant bonuses or new abilities." },
-		{ "word": "Optional Rule", "definition": "Additional rules that can be used at the GM’s discretion, such as measuring spaces, special conditions, or custom rulings." },
-		{ "word": "Condition", "definition": "A state affecting your hero, such as stunned, poisoned, grappled, blinded, or restrained. Conditions impact actions, movement, and combat." },
-		{ "word": "Cover", "definition": "A bonus to defense when hiding behind objects. Cover reduces the chance of being hit by attacks or spells." },
-		{ "word": "Grappling", "definition": "Restraining an opponent in combat. Grappled creatures have limited movement and may need to escape with a skill check." },
-		{ "word": "Ancestry", "definition": "Your hero’s origin or race, such as human, elf, dwarf, or exotic ancestries. Ancestry affects stats, abilities, and traits." },
-		{ "word": "Background", "definition": "Your hero’s history or profession before adventuring. Background grants skills, abilities, and motivation." },
-		{ "word": "Adventuring Motivation", "definition": "The reason your hero seeks adventure, such as fame, fortune, justice, or curiosity. Motivation shapes roleplay and decisions." },
-		{ "word": "Class", "definition": "Your hero’s role, such as warrior, mage, rogue, cleric, etc. Class determines abilities, spells, and combat style." },
-		{ "word": "Leveling Up", "definition": "Increasing your hero’s abilities and power by gaining experience. Leveling up grants new skills, spells, and bonuses." },
-		{ "word": "Fire Spell", "definition": "A spell dealing fire damage or effects, such as burning enemies or creating flames." },
-		{ "word": "Ice Spell", "definition": "A spell dealing ice damage or effects, such as freezing targets or creating barriers." },
-		{ "word": "Lightning Spell", "definition": "A spell dealing lightning damage or effects, such as shocking enemies or energizing allies." },
-		{ "word": "Wind Spell", "definition": "A spell dealing wind damage or effects, such as pushing targets or creating gusts." },
-		{ "word": "Radiant Spell", "definition": "A spell dealing radiant (holy) damage or effects, such as healing or banishing undead." },
-		{ "word": "Necrotic Spell", "definition": "A spell dealing necrotic (death) damage or effects, such as draining life or causing decay." },
-		{ "word": "Utility Spell", "definition": "A spell with non-combat effects, like healing, teleportation, or enhancing abilities." },
-		{ "word": "Glossary", "definition": "A list of terms and their definitions used in Nimble. Refer to the glossary for quick explanations of game concepts." },
-		{ "word": "Size", "definition": "The physical scale of your hero or creature, affecting movement, reach, and certain abilities. Sizes include Small, Medium, Large, etc." },
-		{ "word": "Concentration", "definition": "Maintaining focus on a spell or effect. If concentration is broken, the effect ends. Some spells require concentration to stay active." },
-		{ "word": "Cover & Hiding", "definition": "Using objects or terrain to avoid detection or attacks. Provides bonuses to defense and stealth checks." },
-		{ "word": "Monsters & Armor", "definition": "Monsters have their own stats, abilities, and armor ratings. Armor reduces damage and affects how hard a monster is to hit." },
-		{ "word": "Starting Combat", "definition": "The process of beginning a combat encounter: determine initiative, place heroes and monsters, and start turns." },
-		{ "word": "Resting & Downtime", "definition": "Periods between adventures for recovery, training, and personal pursuits. Resting restores health and abilities; downtime allows for growth." },
-		{ "word": "Character Sheet", "definition": "A record of your hero’s stats, skills, abilities, equipment, and progress. Used to track all aspects of your character." },
-		{ "word": "Common Ancestries", "definition": "Standard races available for heroes, such as human, elf, dwarf, halfling, etc." },
-		{ "word": "Exotic Ancestries", "definition": "Rare or unusual races, offering unique abilities and traits. Examples include dragonborn, tiefling, or custom ancestries." },
-		{ "word": "Backgrounds", "definition": "Pre-adventuring professions or histories that grant skills, abilities, and roleplay hooks." },
-		{ "word": "Key Equipment", "definition": "Essential items for adventuring, such as rope, torches, healing potions, or spell components." },
-		{ "word": "Misc Adventuring Equipment", "definition": "Additional gear for exploration and survival, like tents, maps, or tools." },
-		{ "word": "Magical Items", "definition": "Items imbued with magical power, granting special abilities or bonuses." },
-		{ "word": "Spell Scrolls & Wands", "definition": "Items used to cast spells, either once (scrolls) or multiple times (wands)." },
-		{ "word": "Measuring Spaces", "definition": "Rules for determining distances, areas, and movement on maps or battlefields." }
+		{
+			"word": "Stats",
+			"definition": "Heroes have 4 stats: Strength (STR), Dexterity (DEX), Intelligence (INT) and Will (WIL). Two are Key Stats for your class, the other two are Secondary. A stat normally caps at +5. A stat before a die (e.g. WIL d8) means roll that many dice: WIL 2 = 2d8."
+		},
+		{
+			"word": "Skills",
+			"definition": "Skills measure how well your hero handles the world. There are 10: Arcana, Examination, Lore (INT); Finesse, Stealth (DEX); Might (STR); Influence, Insight, Naturecraft, Perception (WIL). The GM asks for one based on what you describe doing. A skill bonus can never exceed +12."
+		},
+		{
+			"word": "Skill Check",
+			"definition": "Called by the GM when you try to affect the world. Roll 1d20 + your skill; meet or beat the DC to succeed. A natural 1 always fails and a natural 20 always succeeds. Sample DCs: 8 easy, 12 medium, 15 challenging, 18 very difficult, 20+ extremely difficult."
+		},
+		{
+			"word": "Saving Throw",
+			"definition": "When the world affects you, roll a save: 1d20 + the relevant stat (STR, DEX, INT or WIL). Natural 1 fails, natural 20 saves, and you may choose to fail instead of rolling. Each hero has 1 save rolled with advantage, 1 with disadvantage, and 2 neutral. DCs from hero effects are 10+KEY."
+		},
+		{
+			"word": "Hit Points",
+			"definition": "Hit Points (HP) are your ability to endure damage. Damage lowers HP but never below 0. Dropping to 0 HP gives you 1 Wound and the Dying condition until you regain HP. Temp HP are lost first. HP recovers through Hit Dice and rests."
+		},
+		{
+			"word": "Speed",
+			"definition": "How far a character can move with one Move action: 6 spaces unless noted otherwise (a space is about 5 ft. or 1 m; diagonals count as 1). You may pass through allies, or through enemies as difficult terrain (half speed), but can't end movement in an occupied space."
+		},
+		{
+			"word": "Range",
+			"definition": "How far away an ability, weapon or spell can reach its target; if nothing is listed, it is Reach 1. Ranged attacks have disadvantage if any enemy is adjacent to you (Reach attacks don't). Long Range: take disadvantage 1 for +2 Range on a Ranged attack, up to +6."
+		},
+		{
+			"word": "Heroic Action",
+			"definition": "On your turn a hero gets 3 actions to spend on things like Attack, Cast Spell, Move or Assess; most single things cost 1 action, some big spells or abilities cost more. All 3 refresh at the end of your turn, so there's no reason to save them (except for reactions)."
+		},
+		{
+			"word": "Heroic Reaction",
+			"definition": "A reaction taken when it is not your turn. Each costs 1 action (so you start your next turn with fewer) and each can be used at most 1/round. The four reactions are Defend, Interpose, Opportunity Attack and Help."
+		},
+		{
+			"word": "Character Creation",
+			"definition": "Building a hero takes 3 steps: 1) pick one of the 11 classes (biggest impact on everything else), 2) pick an ancestry and a background, plus an optional adventuring motivation, 3) fill in the character sheet: stats via a stat array, skill points, secondary stats, gear or 50 gp, and languages."
+		},
+		{
+			"word": "Equipment",
+			"definition": "Gear your hero carries: armor, shields, weapons, adventuring supplies and magic items. Anyone can use any equipment, but each class lists the weapons and armor it is proficient with; using gear outside that list carries penalties (see Equipment Proficiency)."
+		},
+		{
+			"word": "Armor",
+			"definition": "Your ability to dodge or block damage when you use the Defend reaction. Unarmored or in regular clothes, your Armor equals your DEX. Armor types are Cloth, Leather and Mail (add DEX) and Plate (flat value); shields add more. Some heavier armor needs a minimum STR."
+		},
+		{
+			"word": "Melee Weapon",
+			"definition": "Close-combat weapons like daggers, swords, axes, maces and polearms. Each lists its own damage, e.g. 1d4+DEX (dagger) or 1d8+STR (longsword), so the stat added depends on the weapon. Default Reach is 1; some polearms have Reach 2."
+		},
+		{
+			"word": "Ranged Weapon",
+			"definition": "Weapons used from a distance: sling, javelins, throwing hammers, bows, crossbow, handheld ballista. Most add DEX, but javelins and throwing hammers add STR. Each has a Range value; if any enemy is adjacent to you, ranged attacks have disadvantage."
+		},
+		{
+			"word": "Magical Item",
+			"definition": "An item with magic powers, ranked by rarity (Uncommon, Rare, Very Rare, Legendary). A few can be bought in special shops, but most are found while adventuring. Examples include Weapons of Animosity, Slaying, Wounding and Many Hands, plus wondrous trinkets."
+		},
+		{
+			"word": "Spell",
+			"definition": "Magic heroes cast from the schools they know. There are 6 main schools (Fire, Ice, Lightning, Necrotic, Radiant, Wind), each with free cantrips plus 9 tiers of stronger spells unlocked by leveling. Tiered spells cost mana equal to their tier; some classes also get non-combat utility cantrips."
+		},
+		{
+			"word": "Spell Scroll",
+			"definition": "A single-use written spell. Anyone who can read its language may use it: no mana or magic needed, it takes the spell's normal actions and the scroll is used up. If you know no spell of that school, you need a DC 10 Arcana check or it's wasted."
+		},
+		{
+			"word": "Wand",
+			"definition": "Casts a spell without spending mana or needing magical ability, and unlike a scroll it can be recharged (each wand has its own charges and odd recharge method). Wand-proficient users cast normally; others need a DC 10 + spell tier Arcana check, and the charge is spent either way."
+		},
+		{
+			"word": "Rest",
+			"definition": "Nimble has two kinds of rest. Field Rests (Catch Breath, 10+ min; Make Camp, 8 hrs with food and sleep) let you spend Hit Dice to regain HP. A Safe Rest in a secure place restores all HP, Hit Dice, mana and class resources, and heals 1 Wound."
+		},
+		{
+			"word": "Downtime",
+			"definition": "Time spent away from adventuring, used to recover and pursue activities such as retraining abilities, gathering information, buying and selling, crafting, performing, researching, investing, socializing or building. It can be narrated briefly or skipped."
+		},
+		{
+			"word": "Optional Rule",
+			"definition": "Variant rules a GM may allow for extra tactical spice, e.g. Multiclassing, Small/Large Groups, Fast Resting, Critical Healing, Thrown Potions, Inspiration, Retreat, Custom Weapon Dice. Groups can test one for a session before adopting it. Measuring Spaces offers similar optional precision."
+		},
+		{
+			"word": "Condition",
+			"definition": "An effect, usually negative and separate from damage, from attacks, traps or spells. Some last a round, some until cured, some end with an action and a save. List: Blinded, Bloodied, Charmed, Dazed, Dying, Frightened, Grappled/Restrained, Hampered, Incapacitated, Invisible, Petrified, Poisoned, Prone, Riding, Slowed, Taunted, Wounded."
+		},
+		{
+			"word": "Cover",
+			"definition": "A creature mostly hidden from line of sight (behind a tree, a bigger ally, a table, in dim light) has Cover: attacks against it have disadvantage. A creature completely hidden has Full Cover and usually can't be targeted by attacks at all."
+		},
+		{
+			"word": "Grappling",
+			"definition": "With a free arm (or other way to grab) and the target in Reach, force a STR or DEX save (DC 10 + your STR or DEX). On a fail, a target your size or smaller is Grappled; a larger one makes you Riding it. Ends with forced movement, incapacitation, or an action plus a successful STR/DEX save."
+		},
+		{
+			"word": "Ancestry",
+			"definition": "Your hero's kin or lineage: how they were born and how others first see them. Choose 1 ancestry and add its bonus (one trait, e.g. Human's Tenacious) to your sheet. Each lists a size. Common: Human, Dwarf, Elf, Halfling, Gnome; exotic ones need GM approval. Ancestries do not raise stats."
+		},
+		{
+			"word": "Background",
+			"definition": "Your hero's past: upbringing, skills honed before adventuring, or a defining personality trait. Choose 1; each grants a small perk (e.g. Academy Dropout learns a Utility Spell). Some require a 0 or negative stat at creation. You may reflavor, swap, or blend them with GM approval."
+		},
+		{
+			"word": "Adventuring Motivation",
+			"definition": "Optional pick during creation: the reason your hero adventures, ideally one that makes them want to work with the party. Examples: a life debt to a party member, huge debts to dangerous people, revenge, getting back home, a prophecy, duty, proving your worth, curiosity, or make your own with your GM."
+		},
+		{
+			"word": "Class",
+			"definition": "Your hero's core choice and step 1 of creation; it shapes the rest of your choices and how you interact with the world. It sets your KEY stats, max HP and Hit Die size, starting gear, and the class features you gain each level. The 11 classes are detailed in the Heroes book."
+		},
+		{
+			"word": "Leveling Up",
+			"definition": "The GM may grant a level after an appropriately challenging quest or adventure. On level up: roll your Hit Die with advantage and add it to max HP, +1 max Hit Dice, +1 skill point (and you may move 1 point between skills, none negative; skill max +12), gain your class features, and update anything tied to changed stats."
+		},
+		{
+			"word": "Fire Spell",
+			"definition": "Fire school: high, consistent damage at medium range. Several fire spells inflict the Smoldering condition and gain extra destructive effects against Smoldering enemies. Higher tiers include self-protection and transformation (up to becoming a dragon at tier 9)."
+		},
+		{
+			"word": "Ice Spell",
+			"definition": "Ice school: medium damage at long range, focused on battlefield control (slowing, difficult terrain, restraining) and protecting the caster (e.g. temp HP shields). Some ice spells get bonus effects against Hampered targets."
+		},
+		{
+			"word": "Lightning Spell",
+			"definition": "Lightning school: high damage at long range, with teleportation around the battlefield and bonuses against creatures wearing or carrying metal. Risky: some spells that miss fail to find ground and strike the caster. Taking lightning damage makes you Charged, which some spells use."
+		},
+		{
+			"word": "Wind Spell",
+			"definition": "Wind school: moves friends and foes around the battlefield (pushes, flight, repositioning), slices through groups of enemies, and deals extra damage on crits via Vicious. Also includes protection from ranged attacks."
+		},
+		{
+			"word": "Radiant Spell",
+			"definition": "Radiant school: punishes the unholy, the fearful (Frightened or in cover) and anyone who harms you or allies; works at range or in melee. Also protects, heals wounds, and can even revive the dead. The Shepherd has an exclusive radiant spell (Lifebinding Spirit)."
+		},
+		{
+			"word": "Necrotic Spell",
+			"definition": "Necrotic school: summons horrible minions and manipulates or traps targets. Risky spells prey on damaged creatures and drain life, but often hit friend and foe alike. The Shadowmancer has exclusive necrotic cantrips (Shadow Blast, Summon Shadow)."
+		},
+		{
+			"word": "Utility Spell",
+			"definition": "Non-combat cantrips grouped under each of the 6 schools (Fire, Ice, Lightning, Wind, Radiant, Necrotic) that some classes can pick as they level up. Effects include hidden messages, illusions, teleporting to fire or metal, ice disks, light, telepathy and disguises."
+		},
+		{
+			"word": "Glossary",
+			"definition": "The reference list at the end of the Core Rules (p.56) giving short definitions of common game terms such as Advantage X, Cantrip, Hampered, KEY, LVL, Reach X, Range X, Vulnerable and Wound, with page pointers to the full rules."
+		},
+		{
+			"word": "Size",
+			"definition": "Size categories: Tiny (fits in a pocket, many per space), Small (fits in a backpack, 2 per space), Medium (human, 1 per space), Large (bear, 2x2), Huge (small house, 3x3), Gargantuan (castle keep, 4x4 or more). Some spells and abilities depend on size."
+		},
+		{
+			"word": "Concentration",
+			"definition": "Some activities need Concentration, and you can concentrate on only one at a time. If you are crit while concentrating, make a DC 10 STR save or the activity is broken and fails. Concentration breaks automatically at 0 HP or when incapacitated. Ending it is a free action."
+		},
+		{
+			"word": "Cover & Hiding",
+			"definition": "Cover gives disadvantage on attacks against you; Full Cover prevents targeting. To hide in combat you need Cover from those you hide from and spend an action on a DC 15 Stealth check (auto success with Full Cover). Your first attack while hidden has advantage, then you're revealed unless it kills and no other enemy sees you."
+		},
+		{
+			"word": "Monsters & Armor",
+			"definition": "Most monsters are unarmored. Medium Armor: they take only the dice rolled, ignoring positive damage modifiers. Heavy Armor: they take half the dice damage, also ignoring modifiers. Crits and damage vulnerabilities ignore monster armor."
+		},
+		{
+			"word": "Starting Combat",
+			"definition": "When the GM calls for Initiative, each hero rolls 1d20 + Initiative (usually DEX): single digits start with 1 action, 10-19 with 2, 20+ or a natural 20 with all 3. Heroes go first by default in whatever order is ready, then monsters. Everyone regains all 3 actions at the end of their turn."
+		},
+		{
+			"word": "Resting & Downtime",
+			"definition": "Field Rests (Catch Breath or Make Camp) spend Hit Dice to regain HP while adventuring. Safe Rests at a safe location like an inn restore all HP, Hit Dice, mana and class resources and heal 1 Wound. Downtime is time between adventures for activities like retraining, crafting or research."
+		},
+		{
+			"word": "Character Sheet",
+			"definition": "Sheet tracking your hero: 1) basic details, stat array and advantaged/disadvantaged saves, 2) skill points, 3) secondary stats (HP, Hit Dice, Initiative, Size, Speed, Wounds, inventory slots), 4) equipment and money, 5) languages, 6) other abilities, 7) inventory slots."
+		},
+		{
+			"word": "Common Ancestries",
+			"definition": "The standard ancestries: Human (Medium, Tenacious), Dwarf (Medium, Stout), Elf (Medium, Lithe), Halfling (Small, Elusive), Gnome (Small, Optimistic). Half-elves or other mixes can take one parent's bonus, or both at half strength or half as often."
+		},
+		{
+			"word": "Exotic Ancestries",
+			"definition": "Unusual ancestries that may not fit every setting; check with your GM first. They are Bunbun, Dragonborn, Fiendkin, Goblin, Kobold, Orc, Birdfolk, Celestial, Changeling, Crystalborn, Dryad/Shroomling, Half-Giant, Minotaur/Beastfolk, Oozeling/Construct, Planarbeing, Ratfolk, Stoatling, Turtlefolk, Wyrdling."
+		},
+		{
+			"word": "Backgrounds",
+			"definition": "The book's background options (choose 1), e.g. Back Out of Retirement, Devoted Protector, Academy Dropout, Made a BAD Choice, Haunted Past, Ear to the Ground, Acrobat, Wild One, Fey Touched, Survivalist, Raised by Goblins, (Former) Con Artist, Fearless, Tradesman/Artisan, and more. Each gives one perk."
+		},
+		{
+			"word": "Key Equipment",
+			"definition": "The book's section on core gear: healing potions (1 action to drink or give to an adjacent willing creature), torches and lanterns for seeing in the dark, and how equipment availability and commissioning items from artisans work."
+		},
+		{
+			"word": "Misc Adventuring Equipment",
+			"definition": "A sample price list of mundane gear: rope, chain, torches, lantern, camping supplies, crowbar, lock pick, grappling hook, quiver and ammo, instruments and more. It is not exhaustive; if you can think of it, you can likely buy it."
+		},
+		{
+			"word": "Magical Items",
+			"definition": "Powerful magic gear, usually acquired by adventuring rather than bought; only a few special shops sell a tiny selection. Rarity guides price and level: Uncommon (lv 2-6), Rare (5-12), Very Rare (8-18), Legendary (15-20, 1,000,000+ gp or priceless)."
+		},
+		{
+			"word": "Spell Scrolls & Wands",
+			"definition": "Ways to cast spells without mana or magical ability. Scrolls are single-use and need a DC 10 Arcana check if you know no spell of that school. Wands have rechargeable charges and need a DC 10 + tier Arcana check unless you are wand-proficient."
+		},
+		{
+			"word": "Measuring Spaces",
+			"definition": "Optional guidance for tables wanting precise distances; the book favors speed over precision. By default diagonal spaces count as adjacent; alternatives are no diagonals or every other diagonal. Monsters may move/attack diagonally whenever heroes can. Also defines Cones and Lines."
+		},
+		{
+			"word": "Key Stat",
+			"definition": "Each class has 2 Key Stats; the other 2 stats are Secondary. When an ability or spell says KEY, use one of your Key Stats. Unless stated otherwise, the DC to resist an effect a hero causes is 10 + KEY."
+		},
+		{
+			"word": "Strength",
+			"definition": "STR is raw physical power, endurance and toughness. It affects STR weapon damage, resisting Wounds, HP recovery from Hit Dice, Concentration, STR saves, carrying capacity, Grappling and the Might skill."
+		},
+		{
+			"word": "Dexterity",
+			"definition": "DEX is agility, reflexes and precision with blades or bows. It affects DEX weapon damage, Initiative, DEX saves, Grappling, can add to Armor, and governs the Stealth and Finesse skills."
+		},
+		{
+			"word": "Intelligence",
+			"definition": "INT is knowledge and reasoning (arcane, tactics, street smarts). It affects languages, spellcasting, using wands and spell scrolls, INT saves, and the Arcana, Examination and Lore skills."
+		},
+		{
+			"word": "Will",
+			"definition": "WIL is force of personality, courage and wisdom. It affects spellcasting, WIL saves, and the Insight, Influence, Naturecraft and Perception skills."
+		},
+		{
+			"word": "Arcana",
+			"definition": "INT skill for magic: identifying magical effects, reading arcane symbols, learning what magic items do. Also gives insight into Aberrations, Elementals and Oozes."
+		},
+		{
+			"word": "Examination",
+			"definition": "INT skill for careful analysis and deduction: diagnosing injuries, finding causes of death, uncovering clues, and figuring out traps or mechanisms. Also gives insight into Constructs."
+		},
+		{
+			"word": "Finesse",
+			"definition": "DEX skill for precise, careful use of hands and feet: picking locks, disarming traps, piloting vehicles, tinkering, sleight of hand, stealing or planting items, or climbing a slick wall."
+		},
+		{
+			"word": "Influence",
+			"definition": "WIL skill for persuading others by charm or cunning: convincing or deceiving people, negotiating, building trust, recruiting allies, or giving a captivating performance."
+		},
+		{
+			"word": "Insight",
+			"definition": "WIL skill for reading people and situations: sensing motives, spotting lies, reading emotions, making sense of clues. The GM may also use it retroactively, e.g. to see if your hero thought to buy rope back in town."
+		},
+		{
+			"word": "Might",
+			"definition": "STR skill for applying strength: lifting heavy things, breaking through obstacles, climbing, swimming, jumping and other feats of strength."
+		},
+		{
+			"word": "Lore",
+			"definition": "INT skill for history, kingdoms, religions and cultural practices. Also covers knowledge of Celestials, Dragons, Fey, Fiends, Giants, Humanoids and Undead."
+		},
+		{
+			"word": "Naturecraft",
+			"definition": "WIL skill for the wilds: survival, navigation, tracking, handling animals and identifying plants and creatures. Also gives insight into Beasts, Monstrosities and Plants."
+		},
+		{
+			"word": "Perception",
+			"definition": "WIL skill for noticing details: spotting hidden objects or secret passages, sensing changes in your surroundings, and noticing when you are being watched or followed."
+		},
+		{
+			"word": "Stealth",
+			"definition": "DEX skill for staying unseen and moving quietly: hiding, sneaking past guards and avoiding detection. Hiding in combat takes an action and a DC 15 Stealth check while you have Cover."
+		},
+		{
+			"word": "Advantage",
+			"definition": "In a favorable situation, roll 1 extra die of the same type and drop the lowest. Multiple instances add one extra die each. Each advantage cancels one disadvantage before rolling. Works on any roll, including damage dice."
+		},
+		{
+			"word": "Disadvantage",
+			"definition": "When things are grim or a long shot, roll 1 extra die of the same type and drop the highest. Each extra instance (e.g. disadvantage 2) adds another die to drop. Ties are removed left to right. Each disadvantage cancels one advantage."
+		},
+		{
+			"word": "Wounds",
+			"definition": "Serious injuries tracking how close you are to death. You gain 1 when dropped to 0 HP, more if hurt while Dying. A hero dies at 6 Wounds unless an ability changes that. Wounds heal slowly, usually 1 per Safe Rest. Revival after death is rare and costly."
+		},
+		{
+			"word": "Dying",
+			"definition": "Condition at 0 HP, lasting until you regain HP. You get only 1 action and Concentration breaks. Attacking or casting costs 1 Wound unless you pass a DC 10 STR save. Taking damage while Dying causes 2 Wounds, or 3 from a crit."
+		},
+		{
+			"word": "Temporary HP",
+			"definition": "Extra HP from abilities or effects that are lost before your normal HP. They don't stack: if you'd gain more while you have some, choose which amount to keep. Temp HP expire after a Safe Rest."
+		},
+		{
+			"word": "Hit Dice",
+			"definition": "Hit Dice (HD) are spent during Field Rests to regain HP: roll each and add STR (subtract if STR is negative), or take max value when you Make Camp. You have 1 max HD at level 1, +1 per level. All HD return on a Safe Rest."
+		},
+		{
+			"word": "Blinded",
+			"definition": "Condition: you can't see. Attacks against you have advantage, and your attacks have disadvantage."
+		},
+		{
+			"word": "Bloodied",
+			"definition": "Condition: you are at half your HP or less. Has no effect by itself, but some abilities and effects key off it."
+		},
+		{
+			"word": "Charmed",
+			"definition": "Condition: you see the charmer as an ally, and they have advantage on social interactions with you. WIL saves help resist charm effects."
+		},
+		{
+			"word": "Dazed",
+			"definition": "Condition: a hero loses 1 action; a monster can take one less action on its next turn. Counts as Hampered."
+		},
+		{
+			"word": "Frightened",
+			"definition": "Condition: you have disadvantage on rolls while the source of your fear is nearby, and your speed is halved when moving toward it. WIL saves help resist fear."
+		},
+		{
+			"word": "Grappled",
+			"definition": "Condition: you can't move, and attacks against you have advantage. Ends via forced movement pushing the grappler away, incapacitation, or spending an action and passing a STR or DEX save."
+		},
+		{
+			"word": "Restrained",
+			"definition": "Condition like Grappled (can't move, attacks against you have advantage) but caused by objects such as chains, rope or roots, ignoring size limits. Can also be ended by any sensible means, like picking the lock or cutting or burning the rope."
+		},
+		{
+			"word": "Incapacitated",
+			"definition": "Condition: you can't do anything. Attacks against you have advantage, and any melee attack that hits you is automatically a crit. It also breaks Concentration."
+		},
+		{
+			"word": "Invisible",
+			"definition": "Condition: you can't be seen. Your attacks have advantage, and attacks against you have disadvantage."
+		},
+		{
+			"word": "Petrified",
+			"definition": "Condition: you are Incapacitated and have all the pros and cons of being a rock. Immune to most damage except things like large explosions, picks or similar tools."
+		},
+		{
+			"word": "Poisoned",
+			"definition": "Condition: you have disadvantage on your rolls while poisoned. STR saves are the ones that help resist poison."
+		},
+		{
+			"word": "Prone",
+			"definition": "Condition: movement costs double and your attacks have disadvantage. Melee attacks against you have advantage, Ranged attacks against you have disadvantage. Standing up costs 3 spaces of your Speed."
+		},
+		{
+			"word": "Riding",
+			"definition": "Condition: you move along with the creature you're riding, and attacks that miss you hit it instead. You gain it by successfully grappling a creature larger than you."
+		},
+		{
+			"word": "Slowed",
+			"definition": "Condition: your speed is cut in half, lasting through your next turn. It does not reduce your number of actions."
+		},
+		{
+			"word": "Taunted",
+			"definition": "Condition: you have disadvantage on attacks against anyone other than the creature that most recently taunted you."
+		},
+		{
+			"word": "Wounded",
+			"definition": "Condition: you have at least 1 Wound. A hero typically dies upon reaching 6 Wounds."
+		},
+		{
+			"word": "Minor Statuses",
+			"definition": "Labels like Smoldering, Charged or Distracted that do nothing on their own and end when combat ends. Certain spells and abilities have extra effects against creatures with them."
+		},
+		{
+			"word": "Attack",
+			"definition": "Any spell or ability that can harm an enemy. There is no to-hit roll: roll the listed damage dice and deal that much. If the Primary Die (leftmost die) shows a 1, the attack misses entirely. Rolling its max is a crit."
+		},
+		{
+			"word": "Primary Die",
+			"definition": "For an attack with several dice, the leftmost die. It alone decides hit or miss: a 1 is a miss, its maximum is a critical hit. Assess can raise or lower Primary Die rolls by 1."
+		},
+		{
+			"word": "Critical Hit",
+			"definition": "Rolling the max on the Primary Die is a crit: roll the Primary Die again and add it, repeating every time it rolls max (exploding, no limit). Crits ignore monster armor. Minions can't crit."
+		},
+		{
+			"word": "Rushed Attacks",
+			"definition": "You can attack more than once per turn, but each attack after the first adds a cumulative disadvantage (2nd attack disadvantage 1, 3rd disadvantage 2). For repeated save-forcing abilities like Grappling, the target instead gains stacking advantage."
+		},
+		{
+			"word": "Cast Spell",
+			"definition": "Action to cast a spell. Needs 1 free hand (or a held spellcasting focus) and the ability to speak. Costs mana equal to the spell's tier; cantrips are free. Upcasting: some spells improve per extra mana spent, up to your highest unlocked tier."
+		},
+		{
+			"word": "Move",
+			"definition": "Action to move up to your speed (normally 6 spaces). You can split movement around other actions and take Move several times in a turn. Difficult Terrain halves speed."
+		},
+		{
+			"word": "Difficult Terrain",
+			"definition": "Terrain where your movement speed is halved. Climbing a surface (trees, cliffs, some buildings) and moving through enemy-occupied spaces both count as Difficult Terrain. Creatures in it are Hampered."
+		},
+		{
+			"word": "Assess",
+			"definition": "Action: make a DC 12 skill check that fits the situation to Ask a Question (GM answers honestly), Create an Opening (+1 to the next Primary Die against a target this round) or Anticipate Danger (-1 to Primary Dice against you this round). Each skill only once per encounter."
+		},
+		{
+			"word": "Free Actions",
+			"definition": "Things that cost no action or resource unless stated. Once per turn a hero can do a simple task for free, such as opening an unlocked door, shouting a short phrase, dropping an item or ending Concentration."
+		},
+		{
+			"word": "Defend",
+			"definition": "Reaction (1 action, 1/round): reduce the damage of one attack by your Armor. The GM may rule some damage unavoidable, like psychic damage or some area effects. Can be combined with Interpose if you have the actions."
+		},
+		{
+			"word": "Interpose",
+			"definition": "Reaction (1 action, 1/round): when a creature within 2 spaces would be hit by an attack, shove them aside and become the target. You take their space and move them to an adjacent space you choose. Can be combined with Defend."
+		},
+		{
+			"word": "Opportunity Attack",
+			"definition": "Reaction (1 action, 1/round): make a melee attack with disadvantage against an adjacent enemy as it willingly moves away. Only heroes can make these; monsters don't."
+		},
+		{
+			"word": "Help",
+			"definition": "Reaction (1 action, 1/round): give an ally advantage on a roll if you can plausibly explain to the GM how you help. Only one Help per roll. The GM may grant it outright or ask for a skill check, depending on the idea."
+		},
+		{
+			"word": "Minions",
+			"definition": "Weak enemies that die from any damage. They move and attack together, can't crit, and their attacks can be Defended as one single attack. At the GM's discretion, big damage to a minion can spill over to other minions in range."
+		},
+		{
+			"word": "Initiative",
+			"definition": "At the start of combat each hero rolls 1d20 + Initiative bonus (usually DEX). The result sets starting actions: 1-9 gives 1 action, 10-19 gives 2, 20+ or a natural 20 gives all 3. It doesn't set turn order."
+		},
+		{
+			"word": "Surprise",
+			"definition": "If a party completely catches enemies off guard, the GM may give advantage on Initiative or let everyone start with 3 actions. Being hidden or striking first isn't enough; aware or alert foes can't be surprised. Surprised heroes may roll with disadvantage or start with 1 action."
+		},
+		{
+			"word": "Turns, Rounds, & Encounters",
+			"definition": "A Turn is one hero or monster group acting (about 6 seconds in-world). A Round is everyone taking a turn. An Encounter is all rounds of one fight. 1/round abilities reset when your own turn starts; 1/turn abilities can be used again on another creature's turn."
+		},
+		{
+			"word": "Acting Over Multiple Turns",
+			"definition": "An activity costing more actions than you have can be spread across turns, as long as you keep Concentration and take no other actions or reactions meanwhile (free actions are fine). E.g. start a 3-action spell with 1 action, finish it next turn with 2."
+		},
+		{
+			"word": "Falling & Forced Movement",
+			"definition": "If forced movement is stopped by an obstacle, the creature takes 1d6 bludgeoning per space cut short; hitting another creature splits that damage between them. Falling deals 1d6 bludgeoning per 10 ft. (2 spaces) fallen."
+		},
+		{
+			"word": "Field Rest",
+			"definition": "A rest while adventuring to regain HP with Hit Dice. Catch Breath (10+ minutes): roll any number of HD one at a time, adding STR to each. Make Camp (8+ hours with food and sleep): take each HD's max value instead of rolling, plus STR."
+		},
+		{
+			"word": "Safe Rest",
+			"definition": "Rest in a GM-approved safe place such as an inn (not open wilderness or a dungeon). Restores all HP, Hit Dice, mana and other class resources, and heals 1 Wound. Temp HP expire. Inn rooms cost 5 sp (Poor), 2 gp (Comfortable) or 10 gp (Lavish, grants a Temporary Boon)."
+		},
+		{
+			"word": "Stat Array",
+			"definition": "At creation, pick one array and assign its numbers to STR, DEX, INT, and WIL (best values in your class's KEY stats): Standard +2, +2, +0, -1; Balanced +2, +1, +1, +0; Min-Max +3, +1, -1, -1. Also mark your advantaged and disadvantaged saves."
+		},
+		{
+			"word": "Skill Points",
+			"definition": "At level 1, each skill starts equal to its linked stat (e.g. +2 DEX gives +2 Finesse and +2 Stealth), then you add 4 more points anywhere, spread out or stacked. You gain 1 point per level and may shift 1 point between skills. No skill can exceed +12 or be pushed negative by shifting."
+		},
+		{
+			"word": "Secondary Stats",
+			"definition": "Character sheet values set at creation: max HP and Hit Die size (from class), Hit Dice count (default equals level), Initiative (default DEX), Size, Speed (default 6), max Wounds (default 6), and inventory slots (10 + STR)."
+		},
+		{
+			"word": "Starting Equipment",
+			"definition": "At level 1 a hero takes the gear listed for their class and background, or 50 gp to buy their own. Starting above level 1, multiply that gold by the starting level. Even a rich noble only has this much gold accessible for now; reclaiming the rest could be a quest."
+		},
+		{
+			"word": "Languages",
+			"definition": "Every hero speaks Common, plus one extra language per point of INT. Options: Common, Dwarvish, Elvish, Goblin, Infernal, Thieves' Cant, Celestial, Draconic, Primordial, Deep Speak. Many ancestries also grant a language if INT is not negative. Speaking a creature's tongue can avoid fights."
+		},
+		{
+			"word": "Inventory Slots",
+			"definition": "You carry 10 + STR slots of gear (held, worn, or packed). 1 slot: a one-handed weapon, shield, worn armor, stack of javelins, 500 gp, or 2 potions. 2 slots: a two-handed weapon, unworn armor, or other bulky items. Small related items can share a slot. Ammo usually isn't tracked."
+		},
+		{
+			"word": "Flavor Is Free",
+			"definition": "Optional guideline: you may pair one ancestry's look with another's trait (e.g. a Stout Halfling, an Optimistic Human, a Flameborn Kobold, a leaping Frogfolk using Bunbun rules) as long as it makes sense and the GM agrees."
+		},
+		{
+			"word": "Human",
+			"definition": "Common ancestry, Medium. Curious, ambitious, found everywhere. Tenacious: +1 to all skills and to Initiative."
+		},
+		{
+			"word": "Dwarf",
+			"definition": "Common ancestry, Medium. Sturdy and hard to exhaust. Stout: +2 max Hit Dice, +1 max Wounds, -1 Speed. Knows Dwarvish if INT is not negative."
+		},
+		{
+			"word": "Elf",
+			"definition": "Common ancestry, Medium. Swift and graceful, often acting first. Lithe: advantage on Initiative and +1 Speed. Knows Elvish if INT is not negative."
+		},
+		{
+			"word": "Halfling",
+			"definition": "Common ancestry, Small. Small, lucky folk. Elusive: +1 Stealth, and once per Safe Rest you may turn a failed save into a success."
+		},
+		{
+			"word": "Gnome",
+			"definition": "Common ancestry, Small. Cheerful tinkerers. Optimistic: let an ally within Reach 6 reroll any single die; resets when you are healed to max HP. -1 Speed. Knows Dwarvish (called Gnomish) if INT is not negative."
+		},
+		{
+			"word": "Bunbun",
+			"definition": "Exotic ancestry, Small. Leaping, unpredictable fighters. Bunny Legs: once per encounter, before Interposing or after Defending (after damage), hop up to your Speed in any direction for free."
+		},
+		{
+			"word": "Dragonborn",
+			"definition": "Exotic ancestry, Medium. Draconic Heritage: +1 Armor. When you attack, deal extra LVL+KEY damage (ignores armor) split among your targets; recharges on a Safe Rest or when you gain a Wound. Knows Draconic if INT is not negative."
+		},
+		{
+			"word": "Fiendkin",
+			"definition": "Exotic ancestry, Medium. Descended from fiends or a cursed line, often outcasts. Flameborn: one of your neutral saves becomes advantaged. Knows Infernal if INT is not negative."
+		},
+		{
+			"word": "Goblin",
+			"definition": "Exotic ancestry, Small. Cunning masters of slipping away. Skedaddle: after you are targeted by an attack or negative effect (after damage), move 2 spaces for free, ignoring difficult terrain. Knows Goblin if INT is not negative."
+		},
+		{
+			"word": "Kobold",
+			"definition": "Exotic ancestry, Small. Dragon-obsessed survivors. Wily: once per encounter, force an enemy to reroll a non-critical attack against you. +3 to Influence friendly characters, advantage on skill checks about dragons. Knows Draconic if INT is not negative."
+		},
+		{
+			"word": "Orc",
+			"definition": "Exotic ancestry, Medium. Relentless: once per Safe Rest, when you would drop to 0 HP, set your HP to your LVL instead. +1 Might. Knows Goblin (called Orcish) if INT is not negative."
+		},
+		{
+			"word": "Birdfolk",
+			"definition": "Exotic ancestry, Small or Medium. Hollow Bones: you have a fly Speed while wearing armor no heavier than Leather, but crits against you are Vicious (attacker rolls 1 extra die) and forced movement moves you twice as far."
+		},
+		{
+			"word": "Celestial",
+			"definition": "Exotic ancestry, Medium. Descendants of divine beings. Highborn: your disadvantaged save becomes Neutral instead. Knows Celestial if INT is not negative."
+		},
+		{
+			"word": "Changeling",
+			"definition": "Exotic ancestry, Medium. New Place, New Face: you have 2 shifting skill points. Once per day you may take the appearance of any ancestry and put those 2 points into any 1 skill."
+		},
+		{
+			"word": "Crystalborn",
+			"definition": "Exotic ancestry, Medium. Beings of living crystal. Reflective Aura: once per encounter when you Defend, gain KEY armor and deal KEY damage back to the attacker."
+		},
+		{
+			"word": "Dryad/Shroomling",
+			"definition": "Exotic ancestry, Small or Medium. Plant or fungus folk. Danger Pollen/Spores: whenever an enemy causes you one or more Wounds, all adjacent enemies are Dazed. Knows Elvish if INT is not negative."
+		},
+		{
+			"word": "Half-Giant",
+			"definition": "Exotic ancestry, Large. Huge and tough. Strength of Stone: once per encounter, force an enemy to reroll a crit against you. +2 Might. Knows Dwarvish if INT is not negative."
+		},
+		{
+			"word": "Minotaur/Beastfolk",
+			"definition": "Exotic ancestry, Medium. Charge: once per turn, when you move at least 4 spaces you can push a creature in your path, 1 space if it is Medium or up to 2 spaces if Small or Tiny."
+		},
+		{
+			"word": "Oozeling/Construct",
+			"definition": "Exotic ancestry, Small or Medium. Odd Constitution: your Hit Dice go up one step (d6, d8, d10, d12, d20) and always heal for their maximum, but magical healing always heals you for the minimum amount."
+		},
+		{
+			"word": "Planarbeing",
+			"definition": "Exotic ancestry, Medium. Not from this plane. Planeshift: whenever you Defend, you can take 1 Wound to phase out and ignore the damage. You have -2 max Wounds."
+		},
+		{
+			"word": "Ratfolk",
+			"definition": "Exotic ancestry, Small. Resourceful, loyal survivors. Scurry: gain +2 armor if you moved on your last turn."
+		},
+		{
+			"word": "Stoatling",
+			"definition": "Exotic ancestry, Small. Small But Ferocious: when you make a single-target attack against a larger creature, roll 1 extra d6 per size category it is larger than you. Larger creatures get the same bonus against you."
+		},
+		{
+			"word": "Turtlefolk",
+			"definition": "Exotic ancestry, Small or Medium. Patient and shelled. Slow & Steady: +4 Armor, -2 Speed."
+		},
+		{
+			"word": "Wyrdling",
+			"definition": "Exotic ancestry, Small. Born of magic gone wrong. Chaotic Surge: once per encounter, when you or a willing ally within Reach 6 casts a tiered spell, you may let them roll on the Chaos Table."
+		},
+		{
+			"word": "Back Out of Retirement",
+			"definition": "Background: a veteran returning to adventure. You may take 1 Wound to use an ability or cast a spell as if 1 level higher, but your age gives -1 max Wounds."
+		},
+		{
+			"word": "Devoted Protector",
+			"definition": "Background: choose 1 ally in your party. While they are nearby you can survive +3 max Wounds, but whenever they take a Wound, you take one too."
+		},
+		{
+			"word": "Academy Dropout",
+			"definition": "Background: you left school to learn by real-world experience. Learn any 1 Utility Spell. The book suggests reflavoring it if you want the spell with a different backstory."
+		},
+		{
+			"word": "Made a BAD Choice",
+			"definition": "Background: start with 500 or 1000 extra gold, or an uncommon or rare magic item the GM allows, but gain an equally powerful curse or an enemy who wants it back. The GM may let you take another background as well."
+		},
+		{
+			"word": "Haunted Past",
+			"definition": "Background: voices give you cryptic advice that is sometimes very helpful and sometimes meant to make you suffer. You have advantage against fear. Could be reflavored as Blessed by Spirits."
+		},
+		{
+			"word": "Ear to the Ground",
+			"definition": "Background: advantage on checks to know or find gossip about events that will soon happen or that happened less than 1 year ago."
+		},
+		{
+			"word": "What? I've Been Around",
+			"definition": "Background: you have contacts everywhere. Once per location (GM may allow more), name someone who could help, then roll 1d20 to see how they feel about you: 1-5 hostile and out for your life, 6-12 you are in their debt, 13-19 open to persuasion, 20 a devoted friend."
+		},
+		{
+			"word": "Acrobat",
+			"definition": "Background: a larger ally can throw you really far, and you take half damage from falling and from forced movement."
+		},
+		{
+			"word": "Wild One",
+			"definition": "Background: wild creatures are less scared of you and more willing to help. +1 Naturecraft, and while Field Resting in the wild you roll your Hit Dice with advantage."
+		},
+		{
+			"word": "Fey Touched",
+			"definition": "Background: you take half damage from all magical effects but double damage from metal weapons (doubled before armor applies)."
+		},
+		{
+			"word": "Survivalist",
+			"definition": "Background: you never run out of personal rations and can eat almost anything. Advantage on saves against poison, and +1 max Hit Die."
+		},
+		{
+			"word": "Home at Sea",
+			"definition": "Background: recover twice as many Wounds and HP while resting on a ship or near water, can act as first mate or captain in a pinch, and have advantage on water-related skill checks."
+		},
+		{
+			"word": "At Home Underground",
+			"definition": "Background: you dig twice as fast as others and underground safe rests always count as Lavish lodging for you, but you struggle to rest (INT save) while it is raining."
+		},
+		{
+			"word": "Raised by Goblins",
+			"definition": "Background: you speak Goblin natively, automatically notice and avoid crude traps, and have advantage to notice and disarm sophisticated ones. Variant: be raised by any other ancestry, taking its language and one iconic ability instead."
+		},
+		{
+			"word": "History Buff",
+			"definition": "Background: advantage on all Lore checks about items, facts, or events from more than 100 years ago."
+		},
+		{
+			"word": "(Former) Con Artist",
+			"definition": "Background: you can forge most documents and mimic voices perfectly, and have a criminal contact in most major cities, but your reputation makes people distrust you until you prove yourself."
+		},
+		{
+			"word": "(Secretly) Undead",
+			"definition": "Background: Unnatural Resilience makes you immune to disease and free of the need to eat, drink, or breathe. Children, animals, and Celestials are uneasy around you, and many are horrified if they learn the truth."
+		},
+		{
+			"word": "Taste for the Finer Things",
+			"definition": "Background: you always know current upper-class customs and fashion, and maybe some of their secrets. Advantage on Influence checks with the upper class."
+		},
+		{
+			"word": "Fearless",
+			"definition": "Background: you are immune to the Frightened condition and gain +1 Initiative, but take -1 Armor."
+		},
+		{
+			"word": "So Dumb I'm Smart Sometimes",
+			"definition": "Background (requires 0 or negative INT at creation): reroll an INT-related skill check once per day, and reroll a failed INT save with advantage once per Safe Rest."
+		},
+		{
+			"word": "Wily Underdog",
+			"definition": "Background (requires 0 or negative STR at creation): once per day, reroll a failed STR-related roll (STR attack, STR save, Might check) using a different stat instead."
+		},
+		{
+			"word": "Bumblewise",
+			"definition": "Background (requires 0 or negative WIL at creation): a result of 1 or less on any WIL-related roll (WIL save, Naturecraft, Perception, Influence, or Insight check) counts as a natural 20."
+		},
+		{
+			"word": "Accidental Acrobat",
+			"definition": "Background (requires 0 or negative DEX at creation): whenever you fail a DEX-related roll (DEX attack, DEX save, Stealth or Finesse check) you may roll again, but if you fail again the consequences are bad."
+		},
+		{
+			"word": "Tradesman/Artisan",
+			"definition": "Background: choose a profession such as baker/cook, smith, stonemason, weaver, or leatherworker. You have advantage on checks related to it and keep special knowledge of that trade."
+		},
+		{
+			"word": "Equipment Proficiency",
+			"definition": "Heroes may use any gear, but each class lists weapons and armor it is proficient with. Attacks with a weapon you aren't proficient with can't crit, and using Defend while wearing non-proficient armor costs 1 extra action."
+		},
+		{
+			"word": "Swapping Equipment",
+			"definition": "Once per round, for free, a hero may put away a weapon or shield they are proficient with and equip a different one."
+		},
+		{
+			"word": "Deflect!",
+			"definition": "Optional rule: rather than adding your shield's value to your total Armor, you may reduce the damage of one attack by your shield's armor value, for free, once per round."
+		},
+		{
+			"word": "Cloth Armor",
+			"definition": "Armor of 2+DEX to 5+DEX: Adventurer's Garb 2+DEX (10 gp), Minor Enchantment 3+DEX (100 gp), Major Enchantment 4+DEX (1,000 gp), Epic Enchantment 5+DEX (10,000 gp). No STR requirement."
+		},
+		{
+			"word": "Leather Armor",
+			"definition": "Adds DEX. Cheap Hides 3+DEX (5 gp), Ox Hide 4+DEX (45 gp), Hard Leather 5+DEX (300 gp, req. 1 STR), Wyrmhide 6+DEX (2,000 gp, req. 1 STR)."
+		},
+		{
+			"word": "Mail Armor",
+			"definition": "Adds DEX but only up to +2. Rusty Mail 6+DEX (15 gp), Chain Shirt 9+DEX (60 gp, req. 2 STR), Scale Mail 12+DEX (700 gp, req. 3 STR), Dragonscale 15+DEX (3,000 gp, req. 4 STR)."
+		},
+		{
+			"word": "Plate Armor",
+			"definition": "Flat Armor value with no DEX added. Rusty Plate 10 (25 gp, req. 2 STR), Half Plate 14 (200 gp, req. 3 STR), Full Plate 18 (2,000 gp, req. 4 STR), Mithril Plate 22 (5,000 gp, req. 5 STR)."
+		},
+		{
+			"word": "Shields",
+			"definition": "Add their value to your Armor (or use the optional Deflect! rule). Wooden Buckler +2 (5 gp), Iron Shield +4 (80 gp, req. 2 STR), Tower Shield +6 (1,500 gp, req. 3 STR), Dragon Shield +8 (9,000 gp, req. 3 STR)."
+		},
+		{
+			"word": "2-handed",
+			"definition": "Weapon property: you can hold it in one hand, but you need both hands to attack with it. The Longsword can be used 1-handed with 2 STR."
+		},
+		{
+			"word": "Load",
+			"definition": "Weapon property: the weapon needs extra actions to reload before each shot, e.g. Crossbow (Load: 1 action) and Handheld Ballista (Load: 2 actions)."
+		},
+		{
+			"word": "Reach",
+			"definition": "Weapon property: how close an enemy must be for the attack to affect it. Weapons without a listed Reach have Reach 1; Pole Hammer, Glaive and Spear have Reach 2."
+		},
+		{
+			"word": "Thrown",
+			"definition": "Weapon property: a melee weapon you can throw as if it had Range (e.g. Dagger and Hand Axe have Thrown 4). Once thrown, you no longer have the weapon."
+		},
+		{
+			"word": "Vicious",
+			"definition": "Weapon property: roll 1 extra die whenever you roll crit damage. Only the Primary Die (leftmost) decides whether an attack crits. Sling and Sickle are Vicious."
+		},
+		{
+			"word": "Light",
+			"definition": "Weapon property that lets you dual wield the weapon (Dagger and Short Sword are Light). See Dual Wielding for using heavier weapons with enough STR."
+		},
+		{
+			"word": "Dual Wielding",
+			"definition": "Wield 2 Light weapons and gain advantage on an attack with them 1/round. With 3+ STR you may dual wield non-Light 1-handed weapons (only 1 non-Light at 2 STR). Fully unarmed counts as dual wielding. Different weapons: roll both, pick either result."
+		},
+		{
+			"word": "Unarmed Strikes",
+			"definition": "Attacking with bare hands or feet: roll 1d4; on a hit, deal 1+STR damage. Being completely unarmed counts as dual wielding."
+		},
+		{
+			"word": "Improvised Weapons",
+			"definition": "Using a chair, frying pan, rock or similar as a weapon defaults to 1d4+STR or 1d6+STR. The GM may allow bigger dice or properties when it makes sense, and the item may break if it lands a crit."
+		},
+		{
+			"word": "Customizing Weapons",
+			"definition": "You may reflavor weapons freely (a staff as a greatclub, a sai as a dagger). With GM approval a smith can swap a weapon's dice for ones with the same max total (e.g. a 1d12 Greatmaul dealing 2d6 or 3d4), but can't give a weapon more damage than it has."
+		},
+		{
+			"word": "Healing Potions",
+			"definition": "Limited-supply red elixirs; drinking one or giving it to an adjacent willing creature takes 1 action. Healing Potion heals 2d4+4 (50 gp), Greater 3d6+6 (150 gp), Supreme 4d8+8 (450 gp)."
+		},
+		{
+			"word": "Torches & Lanterns",
+			"definition": "Heroes can't normally see in the dark, and fighting in darkness imposes Blinded. A held torch or lantern lights up to 6 spaces. A torch lasts about 1 dungeon; a lantern with oil lasts a whole outing until your next Safe Rest. Light may draw enemies to you."
+		},
+		{
+			"word": "Equipment Availability",
+			"definition": "Mundane items cost from a few sp to a few gp. Artisans can be commissioned to build almost anything their technology allows, usually starting around 50 gp. Small towns mostly stock items worth 50 gp or less; pricier gear needs a city or traveling merchant."
+		},
+		{
+			"word": "Currency",
+			"definition": "Money comes in silver pieces (sp) and gold pieces (gp); 10 sp = 1 gp. 1 sp is about a humble meal and 1 gp a lavish feast."
+		},
+		{
+			"word": "Typical Costs of Magical Items",
+			"definition": "Magic item rarity guide: Uncommon (levels 2-6, 50-500+ gp), Rare (5-12, 500-5,000+ gp), Very Rare (8-18, 5,000-500,000+ gp), Legendary (15-20, 1,000,000+ gp or priceless)."
+		},
+		{
+			"word": "Weapon of Many Hands",
+			"definition": "Magic weapon granting extra arms while equipped. They can do anything normal hands can (wield gear, Grapple, climb, even dual wield 2-handed weapons) but don't make you act faster. 1 extra hand is likely Uncommon; 4 is Legendary."
+		},
+		{
+			"word": "Weapon of Animosity",
+			"definition": "Magic weapon: each attack rolls an extra animosity die. On a hit the target takes that much extra damage; on a miss, you take it instead. A 1d4 die is likely Uncommon; 1d10 or more, Legendary."
+		},
+		{
+			"word": "Weapon of Slaying",
+			"definition": "Magic weapon that deals an additional die of damage against one specific creature type (which may target you first). +1d4 is likely Uncommon; +1d10 or more, Legendary."
+		},
+		{
+			"word": "Weapon of Wounding",
+			"definition": "Uncommon magic weapon: when you hit, you may take 1d6 damage yourself to deal twice that amount as extra damage to the target."
+		},
+		{
+			"word": "Spell Scroll Costs",
+			"definition": "Typical spell scroll prices by tier: Cantrip 10 gp, T1 35, T2 100, T3 300, T4 1,000, T5 3,000, T6 10,000, T7 25,000+, T8 75,000+, T9 200,000+ gp."
+		},
+		{
+			"word": "Wand Costs",
+			"definition": "Typical wand prices by spell tier: Cantrip 50 gp, T1 175, T2 500, T3 1,500, T4 5,000, T5 15,000, T6 50,000, T7 125,000+, T8 375,000+, T9 1,000,000+ gp. Each wand has a set number of charges and a unique recharge method."
+		},
+		{
+			"word": "Cantrip",
+			"definition": "A basic spell that costs 0 mana. Each school has its own cantrips, and they grow stronger as you level (the High Levels line, usually every 5 levels, adds damage, range or die size)."
+		},
+		{
+			"word": "Tier",
+			"definition": "Spell power level. Beyond cantrips, each school has 9 tiers of progressively stronger spells unlocked as heroes level. You can cast any spell of a known school within your unlocked tiers; a spell's mana cost equals its tier."
+		},
+		{
+			"word": "Mana",
+			"definition": "A portion of the caster's life force used to fuel tiered spells. A spell costs mana equal to its tier; cantrips cost none. Extra mana can be spent to upcast. How each class gains mana is covered in the Heroes book."
+		},
+		{
+			"word": "Upcasting",
+			"definition": "Spending extra mana on a tiered spell, up to your highest unlocked tier, to strengthen it. Each additional mana applies the spell's listed Upcast bonus once (e.g. +damage, +Reach, +targets)."
+		},
+		{
+			"word": "Multi-Target/Area of Effect (AoE)",
+			"definition": "Multi-target and AoE attacks never miss or crit, and one roll applies to every target. Ignore (dis)advantage from conditions on individual targets (like Blinded or Grappled), but anything granting (dis)advantage to your own roll still counts."
+		},
+		{
+			"word": "Save Spells",
+			"definition": "Spells that make targets roll a save instead of an attack. A hero's spell save DC is usually 10 + KEY."
+		},
+		{
+			"word": "Range X",
+			"definition": "A ranged attack or spell can target up to X spaces away, but is made with disadvantage if ANY enemy is adjacent to you. You can add 1 die of disadvantage to gain +2 Range, up to +6."
+		},
+		{
+			"word": "Reach X",
+			"definition": "The area within X spaces around a character, as your choice of cube or sphere. Reach spells can't extend their distance like Range spells, but they are cast normally even when enemies are adjacent."
+		},
+		{
+			"word": "Secret Spells",
+			"definition": "Spells hidden or lost over the ages, perhaps too dangerous to be widely known. Adventurers may stumble on them or take them from defeated foes such as a Lich."
+		},
+		{
+			"word": "Smoldering",
+			"definition": "A condition that does nothing by itself, but many fire spells and abilities have extra effects against Smoldering creatures (e.g. Ignite deals big damage and ends it; some saves auto-fail)."
+		},
+		{
+			"word": "Hampered",
+			"definition": "Any creature whose actions or movement are reduced, e.g. Dazed, Slowed, Grappled, Restrained, Prone, or in Difficult Terrain. Some ice spells get bonus effects against Hampered targets."
+		},
+		{
+			"word": "Charged",
+			"definition": "Whenever you take lightning damage you become Charged for 1 minute. Some lightning spells require or consume it, such as Overload, or cost less while Charged."
+		},
+		{
+			"word": "Next Closest",
+			"definition": "For chaining lightning: if you or an ally is the next closest creature to the target, they get hit. If two creatures are equally close, the GM rolls or picks the one wearing the most metal."
+		},
+		{
+			"word": "d44, d66, d88",
+			"definition": "Roll 2 dice of that size; the first (leftmost) die is the tens digit and the second is the ones (4 and 5 = 45). These rolls cannot miss or crit. With advantage, roll 3 and drop the lowest."
+		},
+		{
+			"word": "Advantage X",
+			"definition": "Roll X extra dice and drop the X lowest. On ties, remove dice from left to right."
+		},
+		{
+			"word": "Disadvantage X",
+			"definition": "Roll X extra dice and drop the X highest. Range attacks can take extra disadvantage dice to gain distance."
+		},
+		{
+			"word": "Blindsight X",
+			"definition": "You sense creatures and obstacles normally within X spaces, ignoring Blinded, darkness and invisibility."
+		},
+		{
+			"word": "Darkvision X",
+			"definition": "You can see normally in the dark out to X spaces. Distances in Nimble are measured in spaces."
+		},
+		{
+			"word": "Cone X",
+			"definition": "An area starting at the character and extending X spaces outward, up to X spaces wide at the far edge (narrower is allowed, wider is not). A space at least half covered is included."
+		},
+		{
+			"word": "Line X",
+			"definition": "A straight area 1 space wide extending up to X spaces in one direction from the character (it can be shorter). A space at least half covered is included."
+		},
+		{
+			"word": "Decrement/Increment",
+			"definition": "Use a die one size smaller or larger along the chain d4, d6, d8, d10, d12, d20 (e.g. cantrip scaling)."
+		},
+		{
+			"word": "Distracted",
+			"definition": "A target is Distracted if it is adjacent to an ally, Taunted by an ally, or cannot see you."
+		},
+		{
+			"word": "Falling",
+			"definition": "A falling creature takes 1d6 damage per 10 ft. fallen. See Falling & Forced Movement (p.10) for more."
+		},
+		{
+			"word": "Free",
+			"definition": "Costs no action or other resource (such as mana) unless stated otherwise, e.g. a spell letting you Defend for free."
+		},
+		{
+			"word": "KEY",
+			"definition": "Shorthand meaning use either of your class's KEY attributes, as in damage or a save DC of 10+KEY."
+		},
+		{
+			"word": "LVL",
+			"definition": "Shorthand for your hero's level; replace it with that number, e.g. LVL Armor or 1d20+LVL damage."
+		},
+		{
+			"word": "Knockback/Push X",
+			"definition": "Forcibly move a creature X spaces, ignoring Difficult Terrain. Other creatures or the environment can stop the movement early and cause damage (see Falling & Forced Movement, p.10)."
+		},
+		{
+			"word": "Paralyzed, Stunned, Unconscious",
+			"definition": "All count as Incapacitated: you can't do anything, attacks against you have advantage, and melee attacks that hit you automatically crit."
+		},
+		{
+			"word": "Resistance",
+			"definition": "You take half damage from that damage type. Some spells reduce immunity to resistance or strip resistance."
+		},
+		{
+			"word": "Vulnerable",
+			"definition": "Damage of a type a creature is vulnerable to ignores its armor; if the creature is unarmored, it takes double damage instead."
+		},
+		{
+			"word": "Spellcasting Focus",
+			"definition": "An item you can use in place of an empty hand when casting spells (an empty hand is otherwise needed)."
+		},
+		{
+			"word": "Teleport",
+			"definition": "Instantaneous movement from one spot to another. Teleporting does not provoke opportunity attacks."
+		},
+		{
+			"word": "Unheld",
+			"definition": "Not touched, worn or held by anyone. Several utility cantrips only affect unheld items."
+		},
+		{
+			"word": "Multiclassing",
+			"definition": "Optional rule: on level up a hero may take level 1 of any other class instead of the next level of their current one. They gain all classes' equipment proficiencies but use the saves of their highest-level class. The GM may veto broken combos."
+		},
+		{
+			"word": "Small Groups",
+			"definition": "Optional rule: a single hero (or a party of 2-3) can add a sidekick NPC with 2 actions, 1 level below the hero. The player controls it in combat, the GM outside. If the hero dies, the sidekick can level up and take over."
+		},
+		{
+			"word": "Large Groups",
+			"definition": "Optional rule: for very large parties (6-10+ heroes), limit each hero to 2 actions per turn instead of 3; no other rebalancing needed. Published adventures typically assume 3-5 players."
+		},
+		{
+			"word": "Fast Resting",
+			"definition": "Optional rule for a more heroic, fast-paced game: whenever heroes take a Safe Rest, it heals all of their Wounds."
+		},
+		{
+			"word": "Critical Healing",
+			"definition": "Optional rule: healing rolls work like attacks. Rolling max crits (roll again as with an attack crit); rolling a 1 fails to heal. Consider incrementing healing dice one size if used."
+		},
+		{
+			"word": "I Had the High Ground",
+			"definition": "Optional rule: a character who takes a crit while at a height may fall. The GM may call for a STR save, or a weak creature may simply fall."
+		},
+		{
+			"word": "Thrown Potions",
+			"definition": "Optional rule: potions can be thrown as Range 8 ranged attacks. They miss on a 1; otherwise they heal half as much since some splashes away."
+		},
+		{
+			"word": "Sucker Punch",
+			"definition": "Optional rule: standing up from Prone lets adjacent enemies make opportunity attacks, for heroes and monsters alike."
+		},
+		{
+			"word": "Playing Dead",
+			"definition": "Optional rule: when a hero drops to 0 HP they may fall prone and try to play dead with an Influence check (or another fitting skill check)."
+		},
+		{
+			"word": "Inspiration",
+			"definition": "Optional rule: the GM rewards memorable play (great role-play, big laughs, repeated misses) with Inspiration, letting you reroll any one die. It expires after a Safe Rest."
+		},
+		{
+			"word": "Retreat",
+			"definition": "Optional rule: any hero may call a retreat on their turn; if the party agrees and the story allows, the GM lets them flee. Each hero describes their escape, and consequences like damage, a Wound or a failed quest may follow unless the escape is clever."
+		},
+		{
+			"word": "Different Key Stats",
+			"definition": "Optional rule: players may swap a class's KEY or Secondary stats when it makes sense, e.g. DEX and WIL for the Cheat."
+		},
+		{
+			"word": "Complex Characters",
+			"definition": "Optional rule: the GM may let heroes choose 2 backgrounds and/or 2 ancestry bonuses."
+		},
+		{
+			"word": "Custom Weapon Dice",
+			"definition": "Optional rule: replace a large weapon die with smaller dice of the same total size, e.g. a 1d10 glaive as 1d4+1d6, with the first die counting as the primary die."
+		},
+		{
+			"word": "Diagonal Spaces",
+			"definition": "By default diagonals count as adjacent (fast, a bit odd spatially). Tables may instead treat diagonals as not adjacent, or count every other diagonal (fiddly but balanced). Whatever heroes can do diagonally, monsters can too."
+		}
 	]
 }
