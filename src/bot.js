@@ -170,16 +170,14 @@ function startBot() {
           message.reply(SEARCH_USAGE);
           return;
         }
-        const results = searchRules.searchDictionary(args[0]);
+        // Search the whole phrase, so "!search lay on hands" works.
+        const keyword = args.join(" ").trim();
+        const results = searchRules.searchDictionary(keyword);
         if (results.length === 0)
-          message.reply(`No results found for "${args[0]}"`);
+          message.reply(`No results found for "${keyword}"`);
         else {
-          const reply = results
-            .map((r) => `**${r.word}**: ${r.definition}`)
-            .join("\n");
-          message.reply(
-            `Found ${results.length} result(s) for "${args[0]}":\n${reply}`,
-          );
+          const { formatSearchReply } = require("./utils/textIndexer");
+          message.reply(formatSearchReply(keyword, results));
         }
         break;
       }
