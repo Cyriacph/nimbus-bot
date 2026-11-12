@@ -23,7 +23,11 @@ const COMMANDS = {
   MY_SPELLS: '!myspells',
   REMOVE_SPELL: '!removespell',
   SET_STAT_ADV: '!setstatadv',
-  SET_STAT_DIS: '!setstatdis'
+  SET_STAT_DIS: '!setstatdis',
+  ADD_FEATURE: '!addfeature',
+  MY_FEATURES: '!myfeatures',
+  FEATURE: '!feature',
+  REMOVE_FEATURE: '!removefeature'
 };
 
 const USAGE = {
@@ -50,7 +54,11 @@ const USAGE = {
   MY_SPELLS: 'Usage: !myspells <characterName>',
   REMOVE_SPELL: 'Usage: !removespell [characterName] [spellName]',
   SET_STAT_ADV: 'Usage: !setstatadv <characterName> <statName>',
-  SET_STAT_DIS: 'Usage: !setstatdis <characterName> <statName>'
+  SET_STAT_DIS: 'Usage: !setstatdis <characterName> <statName>',
+  ADD_FEATURE: 'Usage: !addfeature <characterName> <featureName> <description>\nUse quotes for multi-word names, e.g. !addfeature Kaladin "Lay on Hands" Heal a creature you touch...',
+  MY_FEATURES: 'Usage: !myfeatures <characterName>',
+  FEATURE: 'Usage: !feature <characterName> <featureName>',
+  REMOVE_FEATURE: 'Usage: !removefeature <characterName> <featureName>'
 };
 
 module.exports = {

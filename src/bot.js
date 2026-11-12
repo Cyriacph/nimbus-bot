@@ -508,6 +508,30 @@ function startBot() {
         break;
       }
 
+      case COMMANDS.ADD_FEATURE: {
+        const { handleAddFeature } = require("./commands/features");
+        await handleAddFeature(message, args, USAGE.ADD_FEATURE);
+        break;
+      }
+
+      case COMMANDS.MY_FEATURES: {
+        const { handleMyFeatures } = require("./commands/features");
+        await handleMyFeatures(message, args, USAGE.MY_FEATURES);
+        break;
+      }
+
+      case COMMANDS.FEATURE: {
+        const { handleFeature } = require("./commands/features");
+        await handleFeature(message, args, USAGE.FEATURE);
+        break;
+      }
+
+      case COMMANDS.REMOVE_FEATURE: {
+        const { handleRemoveFeature } = require("./commands/features");
+        await handleRemoveFeature(message, args, USAGE.REMOVE_FEATURE);
+        break;
+      }
+
       default:
         // Optionally handle unknown commands
         break;
